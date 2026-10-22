@@ -1,0 +1,32 @@
+# EU-SME / HGB S267: Company size classification by revenue
+#
+# Based on EU SME definition and German Commercial Code (HGB S267).
+# Used for BUSINESS_METRIC generalization of revenue and budget figures.
+#
+# Boundary semantics: min inclusive, max exclusive. Values in EUR.
+
+metadata:
+  name: "EU-SME / HGB S267"
+  metric_type: revenue
+  unit: EUR
+
+bands:
+  - min: null
+    max: 2000000
+    label_de: "Kleinstunternehmen (<2 Mio EUR)"
+    label_en: "Micro-enterprise (<2M EUR)"
+
+  - min: 2000000
+    max: 10000000
+    label_de: "Kleinunternehmen (2-10 Mio EUR)"
+    label_en: "Small enterprise (2-10M EUR)"
+
+  - min: 10000000
+    max: 50000000
+    label_de: "Mittleres Unternehmen (10-50 Mio EUR)"
+    label_en: "Medium enterprise (10-50M EUR)"
+
+  - min: 50000000
+    max: null
+    label_de: "Grossunternehmen (>50 Mio EUR)"
+    label_en: "Large enterprise (>50M EUR)"

@@ -1,0 +1,87 @@
+Produktspezifikation: Predictive Workforce Planning Engine (PWPE)
+
+Version: 1.2
+Erstellt: 12. August 2024
+Autor: Dr. Jan Weidner, Lead Data Scientist
+Freigabe: Produktkomitee, 28. August 2024
+
+1. Produktübersicht
+
+Die Predictive Workforce Planning Engine (PWPE) ist eine ML-basierte Lösung zur
+Vorhersage von Personalbedarfen in der Fertigungsindustrie. Das Produkt wurde
+ursprünglich für die Automobilzulieferer-Branche entwickelt und wird seit Q2 2024
+auch im Bereich Pharma-Logistik eingesetzt.
+
+Zielgruppe: Personalplaner und Schichtleiter in Unternehmen mit 150-5.000 Mitarbeitern.
+
+2. Technische Architektur
+
+Backend:
+- Inferenz-Engine basiert auf einem Fine-Tuned XGBoost-Ensemble, ergänzt durch
+  einen LSTM-Layer für saisonale Muster.
+- Datenanbindung über Apache Airflow (Batch) und Confluent Kafka (Streaming).
+- Feature Store implementiert in Feast, gehostet auf AWS SageMaker.
+- Modell-Registry in MLflow, versioniert und reproduzierbar.
+
+Frontend:
+- Dashboard auf Basis von Grafana mit kundenspezifischen Panels.
+- REST-API (FastAPI) für Integration mit bestehenden HR-Systemen.
+- Single Sign-On über Okta für Mandant-Authentifizierung.
+
+Infrastruktur:
+- Deployment via Kubernetes (EKS) auf AWS eu-central-1 (Frankfurt).
+- GPU-Inferenz auf NVIDIA A10G Instanzen (g5.xlarge).
+- Datenresidenz: Ausschließlich EU (Frankfurt, Ireland als Failover).
+
+3. Leistungskennzahlen
+
+Modellgenauigkeit:
+- MAPE (Mean Absolute Percentage Error): 8,3% auf dem Validierungsdatensatz
+  (n=145.000 Schichtdatensätze, 18 Monate historische Daten)
+- Prognose-Horizont: 4 Wochen mit wöchentlicher Aktualisierung
+- Precision@90: 94,2% (Überbesetzung) / 91,7% (Unterbesetzung)
+
+Betriebskennzahlen:
+- Inferenzzeit: < 200ms p99 für Einzelstandort-Prognose
+- Durchsatz: 1.200 Prognosen/Stunde im Batch-Modus
+- Verfügbarkeit (SLA): 99,5% (gemessen über 12 Monate)
+
+4. Kundenreferenzen (anonymisiert in Außenkommunikation)
+
+- Kunde A (Automobilzulieferer, Süddeutschland, ca. 2.800 MA):
+  Einsparung von EUR 1,8 Mio. p.a. durch optimierte Leiharbeiterdisposition.
+  Reduktion Überbesetzung um 23%, Unterbesetzung um 31%.
+
+- Kunde B (Pharma-Logistik, NRW, ca. 650 MA):
+  Pilotphase seit April 2024. Erste Ergebnisse: 15% weniger ungeplante Überstunden.
+  Integration mit SAP SuccessFactors über Standardschnittstelle.
+
+5. Wettbewerbsabgrenzung
+
+Die PWPE unterscheidet sich von Wettbewerbern wie Quinyx, Anaplan und Workday
+Adaptive Planning durch:
+- Branchenspezifische Vortrainierung auf Fertigungsdaten (Schichtmodelle,
+  Maschinenverfügbarkeit, Qualifikationsmatrix)
+- Niedrigere Latenz durch Edge-Deployment-Option (NVIDIA Jetson für On-Premise)
+- DSGVO-konforme Architektur ohne US-Datenverarbeitung
+
+6. Roadmap
+
+- Q4 2024: Integration von Wetterdaten als externem Feature (Korrelation mit
+  Krankenstand in Logistik nachgewiesen, r=0,34)
+- Q1 2025: Multi-Mandant-Fähigkeit (aktuell: Single-Tenant pro Deployment)
+- Q2 2025: Erweiterung um Qualifikations-Matching (welcher Mitarbeiter kann
+  welche Station bedienen)
+- 2025 H2: Evaluierung von Transformer-Architektur als Ablösung des
+  XGBoost-Ensembles
+
+7. Kosten und Lizenzierung
+
+- Setup-Gebühr: EUR 45.000 (einmalig, inkl. 3 Monate Onboarding)
+- Laufende Lizenz: EUR 8.500/Monat (bis 1.000 MA), EUR 14.000/Monat (bis 5.000 MA)
+- GPU-Infrastrukturkosten: ca. EUR 2.200/Monat (AWS, Standard-Deployment)
+- Amortisation: Typisch 4-6 Monate (basierend auf Referenzkunden)
+
+Ansprechpartner Vertrieb: Markus Steiner, Head of Sales DACH
+E-Mail: m.steiner@flexitrade-solutions.de
+Telefon: +49 761 555-2847

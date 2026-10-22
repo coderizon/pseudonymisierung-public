@@ -1,0 +1,64 @@
+Projektstatus-Übersicht: Beratungsmandate Q3/Q4 2024
+
+Erstellt von: Programmleitung, 30. September 2024
+Verteilung: Geschäftsleitung, Bereichsleiter
+
+Mandat-ID  | Mandant                      | Branche                        | Schwerpunkt                    | Status       | Laufzeit           | Teamgröße | Budget (EUR)  | Verbrauch | Partner/Vendor
+-----------|------------------------------|--------------------------------|--------------------------------|--------------|--------------------|-----------|--------------|-----------|-----------------
+CC-047     | NovaPharma AG                | Pharmazeutische Industrie      | Post-Merger-Integration        | Aktiv        | 01.04.-31.12.2024  | 8 FTE     | 1.450.000    | 67%       | Deloitte (Co-Beratung)
+CC-051     | Stadtwerke Bodensee GmbH     | Energieversorgung              | Digitale Transformation        | Aktiv        | 15.06.-30.06.2025  | 5 FTE     | 780.000      | 41%       | Accenture (Technologie)
+CC-058     | AutoMotive Precision AG      | Automobilzulieferer            | Operational Excellence         | Vorbereitung | 01.01.-30.09.2025  | 12 FTE    | 2.200.000    | 3%        | —
+CC-062     | DataBridge Holding S.A.      | Finanzdienstleistungen         | Target Operating Model         | Abgeschlossen| 01.02.-31.08.2024  | 6 FTE     | 920.000      | 98%       | McKinsey (Vorlauf)
+CC-071     | GreenLogistics International | Transport & Logistik           | Nachhaltigkeitsstrategie       | Aktiv        | 01.09.-28.02.2025  | 4 FTE     | 520.000      | 22%       | EY (ESG-Reporting)
+
+Detailberichte:
+
+--- CC-047: NovaPharma AG ---
+
+Projektleiter: Dr. Michael Seidel
+Mandantkontakt: Christine Berger (VP Integration Office)
+
+Aktuelle Risiken:
+- Verzögerung bei IT-Systemkonsolidierung. Die Migration des LIMS (Laboratory
+  Information Management System) von LabWare auf Thermo Fisher SampleManager
+  liegt 3 Wochen hinter Plan.
+- Vertrag Nr. 2024-0815 mit dem IT-Dienstleister CoreTech Solutions GmbH muss
+  bis 15. Oktober 2024 verlängert werden, sonst droht Kapazitätsengpass.
+
+Meilensteine:
+- Abschluss Organisationsdesign: 15. Oktober 2024 (im Plan)
+- Go-Live neue Prozesslandschaft: Q1 2025
+- Synergievalidierung: EUR 3,2 Mio. Einsparpotenzial bis Ende 2025
+
+--- CC-051: Stadtwerke Bodensee GmbH ---
+
+Projektleiter: Anna-Lena Fuchs
+Mandantkontakt: Thomas Rieger (Abteilungsleiter Digitalisierung)
+
+Fortschritt:
+- Smart-Meter-Rollout: 12.400 von 45.000 Zählern installiert (28%)
+- Implementierung der IoT-Plattform auf Basis von Siemens MindSphere
+  läuft planmäßig.
+- Schulung der 120 Außendienstmitarbeiter startet am 14. Oktober 2024.
+
+--- CC-058: AutoMotive Precision AG ---
+
+Projektleiter: Robert Keller
+Mandantkontakt: Ing. Franz Huber (Werkleiter Standort Ingolstadt)
+
+Vorbereitung:
+- Lean-Assessment der Fertigungslinien geplant für KW 2-4 2025
+- Benchmark gegen Branchendurchschnitt: OEE-Ziel 85% (aktuell: 71%)
+- Projekt TITAN — interner Codename, Vertrag Nr. PRJ-2025-003
+
+--- CC-071: GreenLogistics International ---
+
+Projektleiter: Sophia Hartmann
+Mandantkontakt: James O'Brien (Head of Sustainability, London)
+
+Schwerpunkte:
+- Carbon-Footprint-Analyse der 340 Transportrouten in 12 Ländern
+- Evaluierung von Elektro-LKW-Pilotprojekt mit Daimler Truck
+- Berichterstattung nach CSRD-Anforderungen bis 31. März 2025
+
+Nächster Review: Programmleitung-Meeting am 15. Oktober 2024

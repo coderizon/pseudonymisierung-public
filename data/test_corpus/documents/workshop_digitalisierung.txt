@@ -1,0 +1,66 @@
+Protokoll: Workshop "Digitalisierung Kernprozesse"
+
+Projekt: PHOENIX
+Datum: 08. Oktober 2024, 09:00-17:00
+Ort: Innovationszentrum Stuttgart, Raum Kepler
+Facilitator: Carla Bergmann (Senior Consultant, Organisationsentwicklung)
+
+Teilnehmer:
+- Henrik Paulsen, VP Digital Transformation
+- Dr. Anke Richter, Head of Process Excellence
+- Tobias Lang, IT-Architekt Plattformentwicklung
+- Claudia Mertens, Leiterin Capability Center Data & Analytics
+
+--- Vormittag: Ist-Analyse ---
+
+Henrik Paulsen eröffnet den Workshop mit einer Übersicht der identifizierten
+Handlungsfelder. Die Abteilung Digital Innovation hat im Vorfeld 14 Prozesse
+als digitalisierungsfähig identifiziert.
+
+Dr. Anke Richter stellt die Ergebnisse der Prozessanalyse vor:
+
+Kernbefunde:
+- Das interne Ticketing-System "ServiceDesk Pro" ist veraltet und wird von
+  ca. 340 Mitarbeitern genutzt. Eine Migration auf ein modernes ITSM-Tool
+  ist bis Q1 2025 geplant.
+- Der manuelle Freigabeprozess für Beschaffungsanträge ("Procurement Gateway")
+  verursacht durchschnittlich 4,3 Tage Durchlaufzeit. Ziel: unter 1 Tag.
+- Das proprietäre Onboarding-Portal der Personalabteilung deckt nur 60%
+  der vorgeschriebenen Schritte digital ab.
+
+Tobias Lang ergänzt zur technischen Infrastruktur:
+- Die bestehende Middleware basiert auf MuleSoft Anypoint Platform und
+  verbindet aktuell 23 Systeme.
+- Ein Wechsel auf eine Event-Driven Architecture mit Apache Kafka
+  wird evaluiert. Proof of Concept soll bis KW 48 vorliegen.
+- Die aktuelle API-Landschaft umfasst 87 REST-Endpunkte, davon 31
+  ohne Authentifizierung — ein Sicherheitsrisiko.
+
+--- Nachmittag: Lösungsdesign ---
+
+Claudia Mertens präsentiert den Vorschlag des Capability Center Data & Analytics:
+
+1. Automatisierung Beschaffungsfreigabe
+   - Implementierung eines regelbasierten Workflows in Camunda BPM
+   - Integration mit SAP S/4HANA für Budgetprüfung in Echtzeit
+   - Erwartete Einsparung: 2.100 Personenstunden/Jahr (ca. EUR 180K)
+
+2. Modernisierung Onboarding
+   - Ablösung des proprietären Portals durch Workday-Modul
+   - Vollständige Digitalisierung aller 47 Onboarding-Schritte
+   - Pilotierung am Standort Stuttgart, Rollout auf München und Hamburg
+
+3. Datenintegration
+   - Aufbau eines zentralen Data Mesh mit Databricks als Plattform
+   - Anbindung der CRM-Daten aus Salesforce und der ERP-Daten aus SAP
+   - Erste Use Cases: Umsatzprognose und Kapazitätsplanung
+
+--- Beschlüsse ---
+
+- Projekt PHOENIX wird in drei Streams aufgeteilt (Beschaffung, Onboarding, Daten)
+- Budget: EUR 1,2 Mio. für 2025, davon EUR 450K für externe Beratung
+- Nächster Meilenstein: Business Case bis 30. November 2024
+- Verantwortlich: Henrik Paulsen (Gesamtprogramm), Dr. Anke Richter (Stream Beschaffung)
+
+Verteiler: Nur Teilnehmer + Geschäftsleitung
+Nächster Workshop: 22. November 2024

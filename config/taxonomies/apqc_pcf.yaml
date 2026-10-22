@@ -1,0 +1,353 @@
+# APQC PCF: Process Classification Framework
+#
+# Source: American Productivity & Quality Center (APQC)
+# Used for PROCESS_ARTIFACT category generalization.
+# Maps proprietary process names to standardized process categories.
+#
+# Note: The APQC PCF is a proprietary framework. This file contains
+# publicly available top-level category names and common process group
+# descriptions. Organizations requiring the full detailed framework
+# should license it from APQC.
+#
+# Structure: 2 levels (v1)
+#   Level 1: Category (13 categories, numbered 1.0-13.0)
+#   Level 2: Process group (numbered x.y)
+
+metadata:
+  name: "APQC PCF"
+  source: "American Productivity & Quality Center (APQC)"
+  levels: 2
+  level_names: ["category", "process_group"]
+
+entries:
+  # Operating processes (1.0-5.0)
+  - code: "1.0"
+    level: 1
+    label_de: "Vision und Strategie entwickeln"
+    label_en: "Develop Vision and Strategy"
+    children:
+      - code: "1.1"
+        level: 2
+        label_de: "Geschaeftskonzept und langfristige Vision definieren"
+        label_en: "Define the business concept and long-term vision"
+      - code: "1.2"
+        level: 2
+        label_de: "Geschaeftsstrategie entwickeln"
+        label_en: "Develop business strategy"
+      - code: "1.3"
+        level: 2
+        label_de: "Strategische Initiativen verwalten"
+        label_en: "Manage strategic initiatives"
+
+  - code: "2.0"
+    level: 1
+    label_de: "Produkte und Dienstleistungen entwickeln und verwalten"
+    label_en: "Develop and Manage Products and Services"
+    children:
+      - code: "2.1"
+        level: 2
+        label_de: "Produkte und Dienstleistungen verwalten"
+        label_en: "Manage product and service portfolio"
+      - code: "2.2"
+        level: 2
+        label_de: "Neue Produkte und Dienstleistungen entwickeln"
+        label_en: "Develop products and services"
+
+  - code: "3.0"
+    level: 1
+    label_de: "Produkte und Dienstleistungen vermarkten und verkaufen"
+    label_en: "Market and Sell Products and Services"
+    children:
+      - code: "3.1"
+        level: 2
+        label_de: "Markt und Kunden verstehen"
+        label_en: "Understand markets, customers and capabilities"
+      - code: "3.2"
+        level: 2
+        label_de: "Marketing-Strategie entwickeln"
+        label_en: "Develop marketing strategy"
+      - code: "3.3"
+        level: 2
+        label_de: "Produkte und Dienstleistungen verkaufen"
+        label_en: "Develop sales strategy"
+      - code: "3.4"
+        level: 2
+        label_de: "Marketingplaene entwickeln und verwalten"
+        label_en: "Develop and manage marketing plans"
+      - code: "3.5"
+        level: 2
+        label_de: "Vertriebspartner und Allianzen entwickeln und verwalten"
+        label_en: "Develop and manage sales plans"
+
+  - code: "4.0"
+    level: 1
+    label_de: "Produkte und Dienstleistungen liefern"
+    label_en: "Deliver Products and Services"
+    children:
+      - code: "4.1"
+        level: 2
+        label_de: "Lieferkette planen und an Nachfrage ausrichten"
+        label_en: "Plan for and align supply chain resources"
+      - code: "4.2"
+        level: 2
+        label_de: "Materialien und Dienstleistungen beschaffen"
+        label_en: "Procure materials and services"
+      - code: "4.3"
+        level: 2
+        label_de: "Produkt herstellen/liefern"
+        label_en: "Produce/Manufacture/Deliver product"
+      - code: "4.4"
+        level: 2
+        label_de: "Produkte und Dienstleistungen an Kunden liefern"
+        label_en: "Deliver products and services to customers"
+
+  - code: "5.0"
+    level: 1
+    label_de: "Kundenservice verwalten"
+    label_en: "Manage Customer Service"
+    children:
+      - code: "5.1"
+        level: 2
+        label_de: "Kundenservice-Strategie entwickeln"
+        label_en: "Develop customer care/customer service strategy"
+      - code: "5.2"
+        level: 2
+        label_de: "Kundenanfragen bearbeiten"
+        label_en: "Plan and manage customer service operations"
+      - code: "5.3"
+        level: 2
+        label_de: "Kundenservice erbringen"
+        label_en: "Measure and evaluate customer service operations"
+      - code: "5.4"
+        level: 2
+        label_de: "Service nach dem Kauf verwalten"
+        label_en: "Manage customer complaints"
+
+  # Management and support processes (6.0-13.0)
+  - code: "6.0"
+    level: 1
+    label_de: "Humankapital entwickeln und verwalten"
+    label_en: "Develop and Manage Human Capital"
+    children:
+      - code: "6.1"
+        level: 2
+        label_de: "Personalstrategie entwickeln und verwalten"
+        label_en: "Develop and manage HR planning, policies and strategies"
+      - code: "6.2"
+        level: 2
+        label_de: "Mitarbeiter rekrutieren, einstellen und einarbeiten"
+        label_en: "Recruit, source and select employees"
+      - code: "6.3"
+        level: 2
+        label_de: "Mitarbeiter entwickeln und beraten"
+        label_en: "Develop and counsel employees"
+      - code: "6.4"
+        level: 2
+        label_de: "Mitarbeiter belohnen und binden"
+        label_en: "Reward and retain employees"
+      - code: "6.5"
+        level: 2
+        label_de: "Mitarbeiter umsetzen und pensionieren"
+        label_en: "Redeploy and retire employees"
+      - code: "6.6"
+        level: 2
+        label_de: "Mitarbeiterinformationen verwalten"
+        label_en: "Manage employee information and analytics"
+
+  - code: "7.0"
+    level: 1
+    label_de: "Informationstechnologie verwalten"
+    label_en: "Manage Information Technology"
+    children:
+      - code: "7.1"
+        level: 2
+        label_de: "IT-Strategie verwalten"
+        label_en: "Manage the business of information technology"
+      - code: "7.2"
+        level: 2
+        label_de: "IT-Kundenbeziehungen verwalten"
+        label_en: "Develop and manage IT customer relationships"
+      - code: "7.3"
+        level: 2
+        label_de: "Unternehmensresilienz und -risiko verwalten"
+        label_en: "Develop and implement security, privacy and data protection controls"
+      - code: "7.4"
+        level: 2
+        label_de: "IT-Loesungen verwalten"
+        label_en: "Manage enterprise information"
+      - code: "7.5"
+        level: 2
+        label_de: "IT-Dienste bereitstellen und unterstuetzen"
+        label_en: "Develop and maintain information technology solutions"
+      - code: "7.6"
+        level: 2
+        label_de: "IT-Wissen verwalten"
+        label_en: "Deploy information technology solutions"
+      - code: "7.7"
+        level: 2
+        label_de: "IT-Infrastruktur verwalten"
+        label_en: "Deliver and support information technology services"
+
+  - code: "8.0"
+    level: 1
+    label_de: "Finanzmittel verwalten"
+    label_en: "Manage Financial Resources"
+    children:
+      - code: "8.1"
+        level: 2
+        label_de: "Planung, Budgetierung und Prognose durchfuehren"
+        label_en: "Perform planning and management accounting"
+      - code: "8.2"
+        level: 2
+        label_de: "Erloes-Rechnungswesen durchfuehren"
+        label_en: "Perform revenue accounting"
+      - code: "8.3"
+        level: 2
+        label_de: "Allgemeines Rechnungswesen und Berichtswesen durchfuehren"
+        label_en: "Perform general accounting and reporting"
+      - code: "8.4"
+        level: 2
+        label_de: "Steuerstrategie verwalten"
+        label_en: "Manage fixed-asset project accounting"
+      - code: "8.5"
+        level: 2
+        label_de: "Kreditorenbuchhaltung und Ausgaben verwalten"
+        label_en: "Process accounts payable and expense reimbursements"
+      - code: "8.6"
+        level: 2
+        label_de: "Debitorenbuchhaltung und Ertrag verwalten"
+        label_en: "Process accounts receivable"
+      - code: "8.7"
+        level: 2
+        label_de: "Konzernrechnungswesen und Berichtswesen durchfuehren"
+        label_en: "Manage treasury operations"
+      - code: "8.8"
+        level: 2
+        label_de: "Interne Kontrollen verwalten"
+        label_en: "Manage internal controls"
+      - code: "8.9"
+        level: 2
+        label_de: "Steuern verwalten"
+        label_en: "Manage taxes"
+
+  - code: "9.0"
+    level: 1
+    label_de: "Vermoegenswerte beschaffen, bauen und verwalten"
+    label_en: "Acquire, Construct and Manage Assets"
+    children:
+      - code: "9.1"
+        level: 2
+        label_de: "Anlagenstrategie entwickeln"
+        label_en: "Design and construct/acquire nonproductive assets"
+      - code: "9.2"
+        level: 2
+        label_de: "Anlagen planen und erwerben"
+        label_en: "Design and construct productive assets"
+      - code: "9.3"
+        level: 2
+        label_de: "Anlagen und Einrichtungen verwalten"
+        label_en: "Maintain productive assets"
+      - code: "9.4"
+        level: 2
+        label_de: "Anlagen stilllegen und entsorgen"
+        label_en: "Maintain nonproductive assets"
+      - code: "9.5"
+        level: 2
+        label_de: "Anlagenrisiken verwalten"
+        label_en: "Dispose of productive and nonproductive assets"
+
+  - code: "10.0"
+    level: 1
+    label_de: "Unternehmensrisiken, Compliance und Resilienz verwalten"
+    label_en: "Manage Enterprise Risk, Compliance and Resiliency"
+    children:
+      - code: "10.1"
+        level: 2
+        label_de: "Unternehmensrisiken verwalten"
+        label_en: "Manage enterprise risk"
+      - code: "10.2"
+        level: 2
+        label_de: "Compliance verwalten"
+        label_en: "Manage compliance"
+      - code: "10.3"
+        level: 2
+        label_de: "Sanierungsmassnahmen verwalten"
+        label_en: "Manage remediation efforts"
+      - code: "10.4"
+        level: 2
+        label_de: "Geschaeftskontinuitaet verwalten"
+        label_en: "Manage business resiliency"
+
+  - code: "11.0"
+    level: 1
+    label_de: "Externe Beziehungen verwalten"
+    label_en: "Manage External Relationships"
+    children:
+      - code: "11.1"
+        level: 2
+        label_de: "Investorenbeziehungen aufbauen und verwalten"
+        label_en: "Build investor relationships"
+      - code: "11.2"
+        level: 2
+        label_de: "Beziehungen zu Behoerden und Branche verwalten"
+        label_en: "Manage government and industry relationships"
+      - code: "11.3"
+        level: 2
+        label_de: "Beziehungen zum Vorstand verwalten"
+        label_en: "Manage relations with board of directors"
+      - code: "11.4"
+        level: 2
+        label_de: "Rechtsangelegenheiten und geistiges Eigentum verwalten"
+        label_en: "Manage legal and ethical issues"
+      - code: "11.5"
+        level: 2
+        label_de: "Oeffentlichkeitsarbeit verwalten"
+        label_en: "Manage public relations program"
+
+  - code: "12.0"
+    level: 1
+    label_de: "Wissen, Verbesserung und Wandel verwalten"
+    label_en: "Develop and Manage Business Capabilities"
+    children:
+      - code: "12.1"
+        level: 2
+        label_de: "Geschaeftsprozessmanagement entwickeln und verwalten"
+        label_en: "Manage business process management"
+      - code: "12.2"
+        level: 2
+        label_de: "Portfolio-, Programm- und Projektmanagement verwalten"
+        label_en: "Manage portfolio, program and project"
+      - code: "12.3"
+        level: 2
+        label_de: "Unternehmensqualitaet verwalten"
+        label_en: "Manage enterprise quality"
+      - code: "12.4"
+        level: 2
+        label_de: "Veraenderung verwalten"
+        label_en: "Manage change"
+      - code: "12.5"
+        level: 2
+        label_de: "Benchmarking-Faehigkeiten entwickeln"
+        label_en: "Develop and manage enterprise content and knowledge management"
+      - code: "12.6"
+        level: 2
+        label_de: "Wissen und Zusammenarbeit verwalten"
+        label_en: "Measure and benchmark"
+
+  - code: "13.0"
+    level: 1
+    label_de: "Gesundheit, Sicherheit und Umwelt verwalten"
+    label_en: "Manage Health, Safety, Environment and Sustainability"
+    children:
+      - code: "13.1"
+        level: 2
+        label_de: "Programme fuer Gesundheit und Sicherheit verwalten"
+        label_en: "Develop health, safety and environmental management programs"
+      - code: "13.2"
+        level: 2
+        label_de: "Nachhaltigkeitsprogramme verwalten"
+        label_en: "Develop and execute health, safety and environmental programs"
+      - code: "13.3"
+        level: 2
+        label_de: "Umweltmanagementprogramme verwalten"
+        label_en: "Develop and execute sustainability programs"

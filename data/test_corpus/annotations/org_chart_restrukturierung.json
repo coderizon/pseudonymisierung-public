@@ -1,0 +1,342 @@
+{
+  "document": "org_chart_restrukturierung.txt",
+  "language": "de",
+  "description": "Strategiepapier zur organisatorischen Neuaufstellung mit Org-Chart, Standortstrategie und M&A-Pipeline",
+  "entities": [
+    {
+      "text": "Dr. Stefan Brandt",
+      "category": "PERSON",
+      "context": "Erstellt von: Dr. Stefan Brandt, Chief Restructuring Officer"
+    },
+    {
+      "text": "Jens Hoffmann",
+      "category": "PERSON",
+      "context": "Bereich Technologie (CTO: Jens Hoffmann)"
+    },
+    {
+      "text": "Katarina Nowak",
+      "category": "PERSON",
+      "context": "Bereich Vertrieb & Kunden (CSO: Katarina Nowak)"
+    },
+    {
+      "text": "Dr. Stefan Brandt",
+      "category": "PERSON",
+      "context": "Bereich Operations (COO: Dr. Stefan Brandt)"
+    },
+    {
+      "text": "Prof. Dr. Eva Zimmermann",
+      "category": "PERSON",
+      "context": "Stabsstelle Strategie & M&A (Leitung: Prof. Dr. Eva Zimmermann)"
+    },
+    {
+      "text": "Jens Hoffmann",
+      "category": "PERSON",
+      "context": "Jens Hoffmann (CTO): Verantwortlich für die technische Integration"
+    },
+    {
+      "text": "Katarina Nowak",
+      "category": "PERSON",
+      "context": "Katarina Nowak (CSO): Aufbau des Enterprise-Vertriebs"
+    },
+    {
+      "text": "Prof. Dr. Eva Zimmermann",
+      "category": "PERSON",
+      "context": "Prof. Dr. Eva Zimmermann: Strategieberatung und M&A-Pipeline"
+    },
+    {
+      "text": "FlexiTrade Solutions GmbH",
+      "category": "ORG_CLIENT",
+      "context": "Die FlexiTrade Solutions GmbH hat in den vergangenen 18 Monaten ein Umsatzwachstum von 34% verzeichnet"
+    },
+    {
+      "text": "CloudMatrix AG",
+      "category": "ORG_PARTNER",
+      "context": "Zuvor VP Engineering bei CloudMatrix AG"
+    },
+    {
+      "text": "DataForce Inc.",
+      "category": "ORG_PARTNER",
+      "context": "Ehemalige Regional Director EMEA bei DataForce Inc."
+    },
+    {
+      "text": "ServiceFirst GmbH",
+      "category": "ORG_PARTNER",
+      "context": "Auslagerung des First-Level-Supports an den Dienstleister ServiceFirst GmbH in Rumänien"
+    },
+    {
+      "text": "Abteilung Plattformentwicklung",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Plattformentwicklung (~85 FTE)"
+    },
+    {
+      "text": "Abteilung Data Engineering",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Data Engineering (~30 FTE)"
+    },
+    {
+      "text": "Abteilung IT-Betrieb & Security",
+      "category": "ORG_UNIT",
+      "context": "Abteilung IT-Betrieb & Security (~25 FTE)"
+    },
+    {
+      "text": "Abteilung Enterprise Sales DACH",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Enterprise Sales DACH"
+    },
+    {
+      "text": "Abteilung Mid-Market & Partner",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Mid-Market & Partner"
+    },
+    {
+      "text": "Abteilung Customer Success",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Customer Success (~40 FTE)"
+    },
+    {
+      "text": "Abteilung Finanzen & Controlling",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Finanzen & Controlling"
+    },
+    {
+      "text": "Abteilung People & Culture",
+      "category": "ORG_UNIT",
+      "context": "Abteilung People & Culture"
+    },
+    {
+      "text": "Abteilung Legal & Compliance",
+      "category": "ORG_UNIT",
+      "context": "Abteilung Legal & Compliance"
+    },
+    {
+      "text": "Stabsstelle Strategie & M&A",
+      "category": "ORG_UNIT",
+      "context": "Stabsstelle Strategie & M&A (Leitung: Prof. Dr. Eva Zimmermann)"
+    },
+    {
+      "text": "Abteilung Softwareentwicklung",
+      "category": "ORG_UNIT",
+      "context": "Fluktuation in der Abteilung Softwareentwicklung auf 28% gestiegen war"
+    },
+    {
+      "text": "Freiburg",
+      "category": "LOCATION",
+      "context": "Hauptsitz Freiburg bleibt erhalten (ca. 200 FTE)"
+    },
+    {
+      "text": "Leipzig",
+      "category": "LOCATION",
+      "context": "Der Standort Leipzig wird als Nearshore-Zentrum für Entwicklung ausgebaut"
+    },
+    {
+      "text": "Wien",
+      "category": "LOCATION",
+      "context": "Der Standort Wien dient als Hub für den österreichischen und osteuropäischen Markt"
+    },
+    {
+      "text": "Rumänien",
+      "category": "LOCATION",
+      "context": "Auslagerung des First-Level-Supports an den Dienstleister ServiceFirst GmbH in Rumänien"
+    },
+    {
+      "text": "Lissabon",
+      "category": "LOCATION",
+      "context": "Geprüft und verworfen: Ein Standort in Lissabon als Remote-Hub"
+    },
+    {
+      "text": "Universität Mannheim",
+      "category": "LOCATION",
+      "context": "Lehrstuhl für Digitale Transformation, Universität Mannheim"
+    },
+    {
+      "text": "Chief Restructuring Officer",
+      "category": "FUNCTION_TITLE",
+      "context": "Dr. Stefan Brandt, Chief Restructuring Officer"
+    },
+    {
+      "text": "VP Engineering",
+      "category": "FUNCTION_TITLE",
+      "context": "Zuvor VP Engineering bei CloudMatrix AG"
+    },
+    {
+      "text": "Regional Director EMEA",
+      "category": "FUNCTION_TITLE",
+      "context": "Ehemalige Regional Director EMEA bei DataForce Inc."
+    },
+    {
+      "text": "34%",
+      "category": "BUSINESS_METRIC",
+      "context": "ein Umsatzwachstum von 34% auf EUR 48 Mio. verzeichnet"
+    },
+    {
+      "text": "EUR 48 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "ein Umsatzwachstum von 34% auf EUR 48 Mio. verzeichnet"
+    },
+    {
+      "text": "180",
+      "category": "BUSINESS_METRIC",
+      "context": "Die Belegschaft ist von 180 auf 310 Mitarbeiter gewachsen"
+    },
+    {
+      "text": "310",
+      "category": "BUSINESS_METRIC",
+      "context": "Die Belegschaft ist von 180 auf 310 Mitarbeiter gewachsen"
+    },
+    {
+      "text": "28%",
+      "category": "BUSINESS_METRIC",
+      "context": "Fluktuation in der Abteilung Softwareentwicklung auf 28% gestiegen war"
+    },
+    {
+      "text": "4,1",
+      "category": "BUSINESS_METRIC",
+      "context": "Die Kundenzufriedenheit war von 4,1 auf 2,8 (5er-Skala) gesunken"
+    },
+    {
+      "text": "2,8",
+      "category": "BUSINESS_METRIC",
+      "context": "Die Kundenzufriedenheit war von 4,1 auf 2,8 (5er-Skala) gesunken"
+    },
+    {
+      "text": "EUR 620K",
+      "category": "BUSINESS_METRIC",
+      "context": "Der finanzielle Schaden belief sich auf ca. EUR 620K"
+    },
+    {
+      "text": "85 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Abteilung Plattformentwicklung (~85 FTE)"
+    },
+    {
+      "text": "30 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Abteilung Data Engineering (~30 FTE)"
+    },
+    {
+      "text": "25 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Abteilung IT-Betrieb & Security (~25 FTE)"
+    },
+    {
+      "text": "40 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Abteilung Customer Success (~40 FTE)"
+    },
+    {
+      "text": "200 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Hauptsitz Freiburg bleibt erhalten (ca. 200 FTE)"
+    },
+    {
+      "text": "80 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Ziel: 80 FTE bis Ende 2025"
+    },
+    {
+      "text": "15 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Wien dient als Hub (15 FTE, Vertrieb und Customer Success)"
+    },
+    {
+      "text": "45 Mitarbeiter",
+      "category": "BUSINESS_METRIC",
+      "context": "ca. 45 Mitarbeiter, geschätzter Umsatz EUR 6-8 Mio."
+    },
+    {
+      "text": "EUR 6-8 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "geschätzter Umsatz EUR 6-8 Mio."
+    },
+    {
+      "text": "12 Mitarbeiter",
+      "category": "BUSINESS_METRIC",
+      "context": "12 Mitarbeiter, Seed-Phase, Technologie-Akquisition"
+    },
+    {
+      "text": "EUR 18K",
+      "category": "BUSINESS_METRIC",
+      "context": "Recruiting-Kosten pro Softwareentwickler liegen bei ca. EUR 18K"
+    },
+    {
+      "text": "Anbieter für Supply-Chain-Optimierung im Automotive-Sektor",
+      "category": "STRATEGY",
+      "context": "Ein Anbieter für Supply-Chain-Optimierung im Automotive-Sektor (Süddeutschland, ca. 45 Mitarbeiter)"
+    },
+    {
+      "text": "dänisches Startup im Bereich Predictive Maintenance für Windkraftanlagen",
+      "category": "STRATEGY",
+      "context": "Ein dänisches Startup im Bereich Predictive Maintenance für Windkraftanlagen (12 Mitarbeiter, Seed-Phase)"
+    },
+    {
+      "text": "gescheiterte Einführung der Matrix-Organisation im Jahr 2022 (Projekt HELIX)",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "Die gescheiterte Einführung der Matrix-Organisation im Jahr 2022 (Projekt HELIX) hat gezeigt, dass ein reiner Top-Down-Ansatz ohne begleitendes Change Management nicht tragfähig ist"
+    },
+    {
+      "text": "Auslagerung des First-Level-Supports an den Dienstleister ServiceFirst GmbH in Rumänien wurde nach 9 Monaten rückgängig gemacht",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "Auch die Auslagerung des First-Level-Supports an den Dienstleister ServiceFirst GmbH in Rumänien wurde nach 9 Monaten rückgängig gemacht"
+    },
+    {
+      "text": "Standort in Lissabon als Remote-Hub",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "Geprüft und verworfen: Ein Standort in Lissabon als Remote-Hub. Die steuerlichen Rahmenbedingungen und Zeitzonenproblematik sprachen dagegen."
+    },
+    {
+      "text": "HELIX",
+      "category": "CONTRACT",
+      "context": "gescheiterte Einführung der Matrix-Organisation im Jahr 2022 (Projekt HELIX)"
+    },
+    {
+      "text": "Supply-Chain-Optimierung",
+      "category": "INDUSTRY",
+      "context": "Anbieter für Supply-Chain-Optimierung im Automotive-Sektor"
+    },
+    {
+      "text": "Automotive-Sektor",
+      "category": "INDUSTRY",
+      "context": "Anbieter für Supply-Chain-Optimierung im Automotive-Sektor"
+    },
+    {
+      "text": "Predictive Maintenance für Windkraftanlagen",
+      "category": "INDUSTRY",
+      "context": "dänisches Startup im Bereich Predictive Maintenance für Windkraftanlagen"
+    },
+    {
+      "text": "20. September 2024",
+      "category": "TEMPORAL",
+      "context": "Freigabe: Vorstand, 20. September 2024"
+    },
+    {
+      "text": "Q1 2025",
+      "category": "TEMPORAL",
+      "context": "Letter of Intent bis Q1 2025"
+    },
+    {
+      "text": "Q3 2025",
+      "category": "TEMPORAL",
+      "context": "Closing bis Q3 2025"
+    },
+    {
+      "text": "Ende 2025",
+      "category": "TEMPORAL",
+      "context": "Ziel: 80 FTE bis Ende 2025"
+    },
+    {
+      "text": "15. Oktober 2024",
+      "category": "TEMPORAL",
+      "context": "Freigabe durch Aufsichtsrat bis 15. Oktober 2024"
+    },
+    {
+      "text": "01. November 2024",
+      "category": "TEMPORAL",
+      "context": "Kommunikation an Führungskräfte: 01. November 2024"
+    },
+    {
+      "text": "15. November 2024",
+      "category": "TEMPORAL",
+      "context": "All-Hands-Meeting: 15. November 2024"
+    }
+  ]
+}

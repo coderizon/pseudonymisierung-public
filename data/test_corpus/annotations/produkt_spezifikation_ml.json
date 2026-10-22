@@ -1,0 +1,277 @@
+{
+  "document": "produkt_spezifikation_ml.txt",
+  "language": "de",
+  "description": "Produktspezifikation einer ML-basierten Workforce-Planning-Lösung mit Architektur, Kennzahlen und Kundenreferenzen",
+  "entities": [
+    {
+      "text": "Dr. Jan Weidner",
+      "category": "PERSON",
+      "context": "Autor: Dr. Jan Weidner, Lead Data Scientist"
+    },
+    {
+      "text": "Markus Steiner",
+      "category": "PERSON",
+      "context": "Ansprechpartner Vertrieb: Markus Steiner, Head of Sales DACH"
+    },
+    {
+      "text": "m.steiner@flexitrade-solutions.de",
+      "category": "CONTACT",
+      "context": "E-Mail: m.steiner@flexitrade-solutions.de"
+    },
+    {
+      "text": "+49 761 555-2847",
+      "category": "CONTACT",
+      "context": "Telefon: +49 761 555-2847"
+    },
+    {
+      "text": "Lead Data Scientist",
+      "category": "FUNCTION_TITLE",
+      "context": "Dr. Jan Weidner, Lead Data Scientist"
+    },
+    {
+      "text": "Head of Sales DACH",
+      "category": "FUNCTION_TITLE",
+      "context": "Markus Steiner, Head of Sales DACH"
+    },
+    {
+      "text": "Automobilzulieferer-Branche",
+      "category": "INDUSTRY",
+      "context": "ursprünglich für die Automobilzulieferer-Branche entwickelt"
+    },
+    {
+      "text": "Pharma-Logistik",
+      "category": "INDUSTRY",
+      "context": "seit Q2 2024 auch im Bereich Pharma-Logistik eingesetzt"
+    },
+    {
+      "text": "Fertigungsindustrie",
+      "category": "INDUSTRY",
+      "context": "Vorhersage von Personalbedarfen in der Fertigungsindustrie"
+    },
+    {
+      "text": "Predictive Workforce Planning Engine",
+      "category": "PRODUCT",
+      "context": "Die Predictive Workforce Planning Engine (PWPE) ist eine ML-basierte Lösung"
+    },
+    {
+      "text": "PWPE",
+      "category": "PRODUCT",
+      "context": "Die PWPE unterscheidet sich von Wettbewerbern"
+    },
+    {
+      "text": "Quinyx",
+      "category": "ORG_PARTNER",
+      "context": "Wettbewerbern wie Quinyx, Anaplan und Workday Adaptive Planning"
+    },
+    {
+      "text": "Anaplan",
+      "category": "ORG_PARTNER",
+      "context": "Wettbewerbern wie Quinyx, Anaplan und Workday Adaptive Planning"
+    },
+    {
+      "text": "Workday Adaptive Planning",
+      "category": "ORG_PARTNER",
+      "context": "Wettbewerbern wie Quinyx, Anaplan und Workday Adaptive Planning"
+    },
+    {
+      "text": "Apache Airflow",
+      "category": "TECHNOLOGY",
+      "context": "Datenanbindung über Apache Airflow (Batch) und Confluent Kafka (Streaming)"
+    },
+    {
+      "text": "Confluent Kafka",
+      "category": "TECHNOLOGY",
+      "context": "Datenanbindung über Apache Airflow (Batch) und Confluent Kafka (Streaming)"
+    },
+    {
+      "text": "Feast",
+      "category": "TECHNOLOGY",
+      "context": "Feature Store implementiert in Feast, gehostet auf AWS SageMaker"
+    },
+    {
+      "text": "AWS SageMaker",
+      "category": "TECHNOLOGY",
+      "context": "Feature Store implementiert in Feast, gehostet auf AWS SageMaker"
+    },
+    {
+      "text": "MLflow",
+      "category": "TECHNOLOGY",
+      "context": "Modell-Registry in MLflow, versioniert und reproduzierbar"
+    },
+    {
+      "text": "Grafana",
+      "category": "TECHNOLOGY",
+      "context": "Dashboard auf Basis von Grafana mit kundenspezifischen Panels"
+    },
+    {
+      "text": "FastAPI",
+      "category": "TECHNOLOGY",
+      "context": "REST-API (FastAPI) für Integration mit bestehenden HR-Systemen"
+    },
+    {
+      "text": "Okta",
+      "category": "TECHNOLOGY",
+      "context": "Single Sign-On über Okta für Mandant-Authentifizierung"
+    },
+    {
+      "text": "Kubernetes (EKS)",
+      "category": "TECHNOLOGY",
+      "context": "Deployment via Kubernetes (EKS) auf AWS eu-central-1 (Frankfurt)"
+    },
+    {
+      "text": "NVIDIA A10G",
+      "category": "TECHNOLOGY",
+      "context": "GPU-Inferenz auf NVIDIA A10G Instanzen (g5.xlarge)"
+    },
+    {
+      "text": "SAP SuccessFactors",
+      "category": "TECHNOLOGY",
+      "context": "Integration mit SAP SuccessFactors über Standardschnittstelle"
+    },
+    {
+      "text": "NVIDIA Jetson",
+      "category": "TECHNOLOGY",
+      "context": "Edge-Deployment-Option (NVIDIA Jetson für On-Premise)"
+    },
+    {
+      "text": "Frankfurt",
+      "category": "LOCATION",
+      "context": "AWS eu-central-1 (Frankfurt)"
+    },
+    {
+      "text": "Süddeutschland",
+      "category": "LOCATION",
+      "context": "Kunde A (Automobilzulieferer, Süddeutschland, ca. 2.800 MA)"
+    },
+    {
+      "text": "NRW",
+      "category": "LOCATION",
+      "context": "Kunde B (Pharma-Logistik, NRW, ca. 650 MA)"
+    },
+    {
+      "text": "8,3%",
+      "category": "BUSINESS_METRIC",
+      "context": "MAPE: 8,3% auf dem Validierungsdatensatz"
+    },
+    {
+      "text": "145.000 Schichtdatensätze",
+      "category": "BUSINESS_METRIC",
+      "context": "n=145.000 Schichtdatensätze, 18 Monate historische Daten"
+    },
+    {
+      "text": "94,2%",
+      "category": "BUSINESS_METRIC",
+      "context": "Precision@90: 94,2% (Überbesetzung)"
+    },
+    {
+      "text": "91,7%",
+      "category": "BUSINESS_METRIC",
+      "context": "91,7% (Unterbesetzung)"
+    },
+    {
+      "text": "1.200 Prognosen/Stunde",
+      "category": "BUSINESS_METRIC",
+      "context": "Durchsatz: 1.200 Prognosen/Stunde im Batch-Modus"
+    },
+    {
+      "text": "99,5%",
+      "category": "BUSINESS_METRIC",
+      "context": "Verfügbarkeit (SLA): 99,5%"
+    },
+    {
+      "text": "2.800 MA",
+      "category": "BUSINESS_METRIC",
+      "context": "Kunde A (Automobilzulieferer, Süddeutschland, ca. 2.800 MA)"
+    },
+    {
+      "text": "EUR 1,8 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "Einsparung von EUR 1,8 Mio. p.a. durch optimierte Leiharbeiterdisposition"
+    },
+    {
+      "text": "23%",
+      "category": "BUSINESS_METRIC",
+      "context": "Reduktion Überbesetzung um 23%"
+    },
+    {
+      "text": "31%",
+      "category": "BUSINESS_METRIC",
+      "context": "Unterbesetzung um 31%"
+    },
+    {
+      "text": "650 MA",
+      "category": "BUSINESS_METRIC",
+      "context": "Kunde B (Pharma-Logistik, NRW, ca. 650 MA)"
+    },
+    {
+      "text": "15%",
+      "category": "BUSINESS_METRIC",
+      "context": "Erste Ergebnisse: 15% weniger ungeplante Überstunden"
+    },
+    {
+      "text": "EUR 45.000",
+      "category": "BUSINESS_METRIC",
+      "context": "Setup-Gebühr: EUR 45.000 (einmalig)"
+    },
+    {
+      "text": "EUR 8.500/Monat",
+      "category": "BUSINESS_METRIC",
+      "context": "Laufende Lizenz: EUR 8.500/Monat (bis 1.000 MA)"
+    },
+    {
+      "text": "EUR 14.000/Monat",
+      "category": "BUSINESS_METRIC",
+      "context": "EUR 14.000/Monat (bis 5.000 MA)"
+    },
+    {
+      "text": "EUR 2.200/Monat",
+      "category": "BUSINESS_METRIC",
+      "context": "GPU-Infrastrukturkosten: ca. EUR 2.200/Monat"
+    },
+    {
+      "text": "12. August 2024",
+      "category": "TEMPORAL",
+      "context": "Erstellt: 12. August 2024"
+    },
+    {
+      "text": "28. August 2024",
+      "category": "TEMPORAL",
+      "context": "Freigabe: Produktkomitee, 28. August 2024"
+    },
+    {
+      "text": "Q2 2024",
+      "category": "TEMPORAL",
+      "context": "seit Q2 2024 auch im Bereich Pharma-Logistik eingesetzt"
+    },
+    {
+      "text": "April 2024",
+      "category": "TEMPORAL",
+      "context": "Pilotphase seit April 2024"
+    },
+    {
+      "text": "Q4 2024",
+      "category": "TEMPORAL",
+      "context": "Q4 2024: Integration von Wetterdaten"
+    },
+    {
+      "text": "Q1 2025",
+      "category": "TEMPORAL",
+      "context": "Q1 2025: Multi-Mandant-Fähigkeit"
+    },
+    {
+      "text": "Q2 2025",
+      "category": "TEMPORAL",
+      "context": "Q2 2025: Erweiterung um Qualifikations-Matching"
+    },
+    {
+      "text": "2025 H2",
+      "category": "TEMPORAL",
+      "context": "2025 H2: Evaluierung von Transformer-Architektur"
+    },
+    {
+      "text": "Fine-Tuned XGBoost-Ensemble, ergänzt durch einen LSTM-Layer",
+      "category": "PROCESS_ARTIFACT",
+      "context": "Inferenz-Engine basiert auf einem Fine-Tuned XGBoost-Ensemble, ergänzt durch einen LSTM-Layer für saisonale Muster"
+    }
+  ]
+}

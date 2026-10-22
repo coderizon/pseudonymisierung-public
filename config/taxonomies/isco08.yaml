@@ -1,0 +1,637 @@
+# ISCO-08: International Standard Classification of Occupations
+#
+# Source: International Labour Organization (ILO)
+# Used for FUNCTION_TITLE category generalization.
+# Standard profile (v1): Level 2 (sub-major group).
+#
+# Structure: 4 levels
+#   Level 1: Major group (10 groups, 1-digit)
+#   Level 2: Sub-major group (~43 groups, 2-digit)
+#   Level 3: Minor group (~130 groups, 3-digit)
+#   Level 4: Unit group (~436 groups, 4-digit)
+
+metadata:
+  name: "ISCO-08"
+  source: "International Labour Organization (ILO)"
+  levels: 4
+  level_names: ["major_group", "sub_major_group", "minor_group", "unit_group"]
+
+entries:
+  - code: "1"
+    level: 1
+    label_de: "Fuehrungskraefte"
+    label_en: "Managers"
+    children:
+      - code: "11"
+        level: 2
+        label_de: "Geschaeftsfuehrer, Vorstaende und leitende Verwaltungsbedienstete"
+        label_en: "Chief executives, senior officials and legislators"
+        children:
+          - code: "111"
+            level: 3
+            label_de: "Gesetzgeber und leitende Verwaltungsbedienstete"
+            label_en: "Legislators and senior officials"
+            children:
+              - code: "1111"
+                level: 4
+                label_de: "Gesetzgeber"
+                label_en: "Legislators"
+              - code: "1112"
+                level: 4
+                label_de: "Leitende Verwaltungsbedienstete"
+                label_en: "Senior government officials"
+              - code: "1113"
+                level: 4
+                label_de: "Fuehrer traditioneller Gemeinschaften und Doerfer"
+                label_en: "Traditional chiefs and heads of village"
+              - code: "1114"
+                level: 4
+                label_de: "Leitende Bedienstete von Interessenorganisationen"
+                label_en: "Senior officials of special-interest organisations"
+          - code: "112"
+            level: 3
+            label_de: "Geschaeftsfuehrer und Vorstaende"
+            label_en: "Managing directors and chief executives"
+            children:
+              - code: "1120"
+                level: 4
+                label_de: "Geschaeftsfuehrer und Vorstaende"
+                label_en: "Managing directors and chief executives"
+      - code: "12"
+        level: 2
+        label_de: "Fuehrungskraefte im kaufmaennischen Bereich"
+        label_en: "Administrative and commercial managers"
+        children:
+          - code: "121"
+            level: 3
+            label_de: "Fuehrungskraefte in Wirtschaft und Verwaltung"
+            label_en: "Business services and administration managers"
+            children:
+              - code: "1211"
+                level: 4
+                label_de: "Finanz-Fuehrungskraefte"
+                label_en: "Finance managers"
+              - code: "1212"
+                level: 4
+                label_de: "Personal-Fuehrungskraefte"
+                label_en: "Human resource managers"
+              - code: "1213"
+                level: 4
+                label_de: "Fuehrungskraefte in der Unternehmenspolitik und -planung"
+                label_en: "Policy and planning managers"
+              - code: "1219"
+                level: 4
+                label_de: "Fuehrungskraefte in Wirtschaft und Verwaltung, anderweitig nicht genannt"
+                label_en: "Business services and administration managers not elsewhere classified"
+          - code: "122"
+            level: 3
+            label_de: "Fuehrungskraefte in Vertrieb, Marketing und Entwicklung"
+            label_en: "Sales, marketing and development managers"
+            children:
+              - code: "1221"
+                level: 4
+                label_de: "Vertriebs- und Marketing-Fuehrungskraefte"
+                label_en: "Sales and marketing managers"
+              - code: "1222"
+                level: 4
+                label_de: "Fuehrungskraefte in Werbung und Oeffentlichkeitsarbeit"
+                label_en: "Advertising and public relations managers"
+              - code: "1223"
+                level: 4
+                label_de: "Fuehrungskraefte in Forschung und Entwicklung"
+                label_en: "Research and development managers"
+      - code: "13"
+        level: 2
+        label_de: "Fuehrungskraefte in der Produktion und bei speziellen Dienstleistungen"
+        label_en: "Production and specialised services managers"
+        children:
+          - code: "131"
+            level: 3
+            label_de: "Fuehrungskraefte in der landwirtschaftlichen Produktion, Forstwirtschaft und Fischerei"
+            label_en: "Production managers in agriculture, forestry and fisheries"
+            children:
+              - code: "1311"
+                level: 4
+                label_de: "Fuehrungskraefte in der landwirtschaftlichen Produktion"
+                label_en: "Agricultural and forestry production managers"
+              - code: "1312"
+                level: 4
+                label_de: "Fuehrungskraefte in der Aquakultur und Fischerei"
+                label_en: "Aquaculture and fisheries production managers"
+          - code: "132"
+            level: 3
+            label_de: "Fuehrungskraefte in Industrie, Bergbau, Bau und Vertrieb"
+            label_en: "Manufacturing, mining, construction, and distribution managers"
+            children:
+              - code: "1321"
+                level: 4
+                label_de: "Fuehrungskraefte im verarbeitenden Gewerbe"
+                label_en: "Manufacturing managers"
+              - code: "1322"
+                level: 4
+                label_de: "Fuehrungskraefte im Bergbau"
+                label_en: "Mining managers"
+              - code: "1323"
+                level: 4
+                label_de: "Fuehrungskraefte im Baugewerbe"
+                label_en: "Construction managers"
+              - code: "1324"
+                level: 4
+                label_de: "Fuehrungskraefte in Beschaffung und Vertrieb"
+                label_en: "Supply, distribution and related managers"
+          - code: "133"
+            level: 3
+            label_de: "Fuehrungskraefte bei IKT-Dienstleistungen"
+            label_en: "Information and communications technology service managers"
+            children:
+              - code: "1330"
+                level: 4
+                label_de: "Fuehrungskraefte bei IKT-Dienstleistungen"
+                label_en: "Information and communications technology service managers"
+          - code: "134"
+            level: 3
+            label_de: "Fuehrungskraefte bei speziellen Dienstleistungen"
+            label_en: "Professional services managers"
+            children:
+              - code: "1341"
+                level: 4
+                label_de: "Fuehrungskraefte bei Betreuungsdienstleistungen fuer Kinder"
+                label_en: "Child care services managers"
+              - code: "1342"
+                level: 4
+                label_de: "Fuehrungskraefte im Gesundheitswesen"
+                label_en: "Health services managers"
+              - code: "1343"
+                level: 4
+                label_de: "Fuehrungskraefte im Bereich der Altenpflege"
+                label_en: "Aged care services managers"
+              - code: "1344"
+                level: 4
+                label_de: "Fuehrungskraefte im Bereich der Sozialarbeit"
+                label_en: "Social welfare managers"
+              - code: "1345"
+                level: 4
+                label_de: "Fuehrungskraefte im Bildungswesen"
+                label_en: "Education managers"
+              - code: "1346"
+                level: 4
+                label_de: "Fuehrungskraefte bei Finanz- und Versicherungsdienstleistungen"
+                label_en: "Financial and insurance services branch managers"
+              - code: "1349"
+                level: 4
+                label_de: "Fuehrungskraefte bei speziellen Dienstleistungen, anderweitig nicht genannt"
+                label_en: "Professional services managers not elsewhere classified"
+      - code: "14"
+        level: 2
+        label_de: "Fuehrungskraefte im Hotel- und Gaststttengewerbe, im Handel und sonstigen Dienstleistungen"
+        label_en: "Hospitality, retail and other services managers"
+        children:
+          - code: "141"
+            level: 3
+            label_de: "Fuehrungskraefte in Hotels und Restaurants"
+            label_en: "Hotel and restaurant managers"
+            children:
+              - code: "1411"
+                level: 4
+                label_de: "Hotelmanager"
+                label_en: "Hotel managers"
+              - code: "1412"
+                level: 4
+                label_de: "Restaurantmanager"
+                label_en: "Restaurant managers"
+          - code: "142"
+            level: 3
+            label_de: "Fuehrungskraefte im Handel"
+            label_en: "Retail and wholesale trade managers"
+            children:
+              - code: "1420"
+                level: 4
+                label_de: "Fuehrungskraefte im Handel"
+                label_en: "Retail and wholesale trade managers"
+          - code: "143"
+            level: 3
+            label_de: "Fuehrungskraefte bei sonstigen Dienstleistungen"
+            label_en: "Other services managers"
+            children:
+              - code: "1431"
+                level: 4
+                label_de: "Fuehrungskraefte bei Sport-, Erholungs- und Kultureinrichtungen"
+                label_en: "Sports, recreation and cultural centre managers"
+              - code: "1439"
+                level: 4
+                label_de: "Fuehrungskraefte bei sonstigen Dienstleistungen, anderweitig nicht genannt"
+                label_en: "Services managers not elsewhere classified"
+
+  - code: "2"
+    level: 1
+    label_de: "Akademische Berufe"
+    label_en: "Professionals"
+    children:
+      - code: "21"
+        level: 2
+        label_de: "Naturwissenschaftler, Mathematiker und Ingenieure"
+        label_en: "Science and engineering professionals"
+      - code: "22"
+        level: 2
+        label_de: "Akademische und vergleichbare Fachkraefte in der Gesundheitsversorgung"
+        label_en: "Health professionals"
+      - code: "23"
+        level: 2
+        label_de: "Lehrkraefte"
+        label_en: "Teaching professionals"
+      - code: "24"
+        level: 2
+        label_de: "Betriebswirte und vergleichbare akademische Berufe"
+        label_en: "Business and administration professionals"
+      - code: "25"
+        level: 2
+        label_de: "Akademische und vergleichbare Fachkraefte in der Informations- und Kommunikationstechnologie"
+        label_en: "Information and communications technology professionals"
+        children:
+          - code: "251"
+            level: 3
+            label_de: "Entwickler und Analytiker von Software und Anwendungen"
+            label_en: "Software and applications developers and analysts"
+            children:
+              - code: "2511"
+                level: 4
+                label_de: "Systemanalytiker"
+                label_en: "Systems analysts"
+              - code: "2512"
+                level: 4
+                label_de: "Softwareentwickler"
+                label_en: "Software developers"
+              - code: "2513"
+                level: 4
+                label_de: "Web- und Multimediaentwickler"
+                label_en: "Web and multimedia developers"
+              - code: "2514"
+                level: 4
+                label_de: "Anwendungsprogrammierer"
+                label_en: "Applications programmers"
+              - code: "2519"
+                level: 4
+                label_de: "Entwickler und Analytiker von Software und Anwendungen, anderweitig nicht genannt"
+                label_en: "Software and applications developers and analysts not elsewhere classified"
+          - code: "252"
+            level: 3
+            label_de: "Datenbankfachleute und Netzwerkfachleute"
+            label_en: "Database and network professionals"
+            children:
+              - code: "2521"
+                level: 4
+                label_de: "Datenbankdesigner und -administratoren"
+                label_en: "Database designers and administrators"
+              - code: "2522"
+                level: 4
+                label_de: "Systemadministratoren"
+                label_en: "Systems administrators"
+              - code: "2523"
+                level: 4
+                label_de: "Netzwerkfachleute"
+                label_en: "Computer network professionals"
+              - code: "2529"
+                level: 4
+                label_de: "Datenbankfachleute und Netzwerkfachleute, anderweitig nicht genannt"
+                label_en: "Database and network professionals not elsewhere classified"
+      - code: "26"
+        level: 2
+        label_de: "Juristen, Sozialwissenschaftler und Kulturberufe"
+        label_en: "Legal, social and cultural professionals"
+
+  - code: "3"
+    level: 1
+    label_de: "Techniker und gleichrangige nichttechnische Berufe"
+    label_en: "Technicians and associate professionals"
+    children:
+      - code: "31"
+        level: 2
+        label_de: "Ingenieurtechnische und vergleichbare Fachkraefte"
+        label_en: "Science and engineering associate professionals"
+      - code: "32"
+        level: 2
+        label_de: "Assistenzberufe im Gesundheitswesen"
+        label_en: "Health associate professionals"
+      - code: "33"
+        level: 2
+        label_de: "Nicht-akademische kaufmaennische und Verwaltungsfachkraefte"
+        label_en: "Business and administration associate professionals"
+        children:
+          - code: "331"
+            level: 3
+            label_de: "Nicht-akademische Fachkraefte im Finanzwesen"
+            label_en: "Financial and mathematical associate professionals"
+            children:
+              - code: "3311"
+                level: 4
+                label_de: "Wertpapier- und Devisenhaendler"
+                label_en: "Securities and finance dealers and brokers"
+              - code: "3312"
+                level: 4
+                label_de: "Kredit- und Darlehensfachkraefte"
+                label_en: "Credit and loans officers"
+              - code: "3313"
+                level: 4
+                label_de: "Fachkraefte im Rechnungswesen"
+                label_en: "Accounting associate professionals"
+              - code: "3314"
+                level: 4
+                label_de: "Fachkraefte in Statistik, Mathematik und verwandten Gebieten"
+                label_en: "Statistical, mathematical and related associate professionals"
+              - code: "3315"
+                level: 4
+                label_de: "Schaetzer und Gutachter"
+                label_en: "Valuers and loss assessors"
+          - code: "332"
+            level: 3
+            label_de: "Vertriebsagenten, Einkaufsvermittler und Handelsmaklern"
+            label_en: "Sales and purchasing agents and brokers"
+            children:
+              - code: "3321"
+                level: 4
+                label_de: "Versicherungsvertreter"
+                label_en: "Insurance representatives"
+              - code: "3322"
+                level: 4
+                label_de: "Handelsvertreter"
+                label_en: "Commercial sales representatives"
+              - code: "3323"
+                level: 4
+                label_de: "Einkaufsvermittler"
+                label_en: "Buyers"
+              - code: "3324"
+                level: 4
+                label_de: "Handelsmaklern"
+                label_en: "Trade brokers"
+          - code: "333"
+            level: 3
+            label_de: "Vermittler gewerblicher Dienstleistungen"
+            label_en: "Business services agents"
+            children:
+              - code: "3331"
+                level: 4
+                label_de: "Spediteure"
+                label_en: "Clearing and forwarding agents"
+              - code: "3332"
+                level: 4
+                label_de: "Konferenz- und Veranstaltungsplaner"
+                label_en: "Conference and event planners"
+              - code: "3333"
+                level: 4
+                label_de: "Arbeitsvermittler"
+                label_en: "Employment agents and contractors"
+              - code: "3334"
+                level: 4
+                label_de: "Immobilienmakler und -verwalter"
+                label_en: "Real estate agents and property managers"
+              - code: "3339"
+                level: 4
+                label_de: "Vermittler gewerblicher Dienstleistungen, anderweitig nicht genannt"
+                label_en: "Business services agents not elsewhere classified"
+          - code: "334"
+            level: 3
+            label_de: "Verwaltungsfachkraefte und spezialisierte Sekretariatskraefte"
+            label_en: "Administrative and specialised secretaries"
+            children:
+              - code: "3341"
+                level: 4
+                label_de: "Buerovorsteher"
+                label_en: "Office supervisors"
+              - code: "3342"
+                level: 4
+                label_de: "Rechtsanwalts- und Notariatsfachkraefte"
+                label_en: "Legal secretaries"
+              - code: "3343"
+                level: 4
+                label_de: "Verwaltungsfachkraefte"
+                label_en: "Administrative and executive secretaries"
+              - code: "3344"
+                level: 4
+                label_de: "Fachkraefte im medizinischen Sekretariat"
+                label_en: "Medical secretaries"
+          - code: "335"
+            level: 3
+            label_de: "Fachkraefte in der oeffentlichen Verwaltung"
+            label_en: "Regulatory government associate professionals"
+            children:
+              - code: "3351"
+                level: 4
+                label_de: "Zollbeamte und Grenzschutzbeamte"
+                label_en: "Customs and border inspectors"
+              - code: "3352"
+                level: 4
+                label_de: "Steuerfachkraefte"
+                label_en: "Government tax and excise officials"
+              - code: "3353"
+                level: 4
+                label_de: "Fachkraefte fuer Sozialprogramme"
+                label_en: "Government social benefits officials"
+              - code: "3354"
+                level: 4
+                label_de: "Fachkraefte fuer Lizenzvergabe"
+                label_en: "Government licensing officials"
+              - code: "3355"
+                level: 4
+                label_de: "Polizeikommissare und Kriminalfachkraefte"
+                label_en: "Police inspectors and detectives"
+              - code: "3359"
+                level: 4
+                label_de: "Fachkraefte in der oeffentlichen Verwaltung, anderweitig nicht genannt"
+                label_en: "Regulatory government associate professionals not elsewhere classified"
+      - code: "34"
+        level: 2
+        label_de: "Nicht-akademische juristische, sozialpflegerische, kulturelle und verwandte Fachkraefte"
+        label_en: "Legal, social, cultural and related associate professionals"
+      - code: "35"
+        level: 2
+        label_de: "Informations- und Kommunikationstechnische Fachkraefte"
+        label_en: "Information and communications technicians"
+        children:
+          - code: "351"
+            level: 3
+            label_de: "Techniker fuer den Betrieb von IKT und fuer Anwenderbetreuung"
+            label_en: "Information and communications technology operations and user support technicians"
+            children:
+              - code: "3511"
+                level: 4
+                label_de: "Fachkraefte fuer den IKT-Betrieb"
+                label_en: "Information and communications technology operations technicians"
+              - code: "3512"
+                level: 4
+                label_de: "Fachkraefte fuer IKT-Anwenderbetreuung"
+                label_en: "Information and communications technology user support technicians"
+              - code: "3513"
+                level: 4
+                label_de: "Fachkraefte fuer Computernetzwerke und -systeme"
+                label_en: "Computer network and systems technicians"
+              - code: "3514"
+                level: 4
+                label_de: "Webmaster"
+                label_en: "Web technicians"
+          - code: "352"
+            level: 3
+            label_de: "Telekommunikationstechniker"
+            label_en: "Telecommunications and broadcasting technicians"
+            children:
+              - code: "3521"
+                level: 4
+                label_de: "Rundfunk- und audiovisuelle Techniker"
+                label_en: "Broadcasting and audio-visual technicians"
+              - code: "3522"
+                level: 4
+                label_de: "Telekommunikationstechniker"
+                label_en: "Telecommunications engineering technicians"
+
+  - code: "4"
+    level: 1
+    label_de: "Buerokraefte und verwandte Berufe"
+    label_en: "Clerical support workers"
+    children:
+      - code: "41"
+        level: 2
+        label_de: "Allgemeine Buero- und Sekretariatskraefte"
+        label_en: "General and keyboard clerks"
+      - code: "42"
+        level: 2
+        label_de: "Buerokraefte mit Kundenkontakt"
+        label_en: "Customer services clerks"
+      - code: "43"
+        level: 2
+        label_de: "Buerokraefte im Finanz- und Rechnungswesen, in der Statistik und in der Materialwirtschaft"
+        label_en: "Numerical and material recording clerks"
+      - code: "44"
+        level: 2
+        label_de: "Sonstige Buerokraefte und verwandte Berufe"
+        label_en: "Other clerical support workers"
+
+  - code: "5"
+    level: 1
+    label_de: "Dienstleistungsberufe und Verkaeufer"
+    label_en: "Service and sales workers"
+    children:
+      - code: "51"
+        level: 2
+        label_de: "Berufe im Bereich personenbezogener Dienstleistungen"
+        label_en: "Personal service workers"
+      - code: "52"
+        level: 2
+        label_de: "Verkaeufer"
+        label_en: "Sales workers"
+      - code: "53"
+        level: 2
+        label_de: "Betreuungsberufe"
+        label_en: "Personal care workers"
+      - code: "54"
+        level: 2
+        label_de: "Schutzkraefte und Sicherheitsbedienstete"
+        label_en: "Protective services workers"
+
+  - code: "6"
+    level: 1
+    label_de: "Fachkraefte in Land- und Forstwirtschaft und Fischerei"
+    label_en: "Skilled agricultural, forestry and fishery workers"
+    children:
+      - code: "61"
+        level: 2
+        label_de: "Fachkraefte in der Landwirtschaft"
+        label_en: "Market-oriented skilled agricultural workers"
+      - code: "62"
+        level: 2
+        label_de: "Fachkraefte in der Forstwirtschaft, Fischerei und Jagd"
+        label_en: "Market-oriented skilled forestry, fishery and hunting workers"
+      - code: "63"
+        level: 2
+        label_de: "Fachkraefte in Landwirtschaft, Fischerei und Jagd fuer den Eigenbedarf"
+        label_en: "Subsistence farmers, fishers, hunters and gatherers"
+
+  - code: "7"
+    level: 1
+    label_de: "Handwerks- und verwandte Berufe"
+    label_en: "Craft and related trades workers"
+    children:
+      - code: "71"
+        level: 2
+        label_de: "Bau- und verwandte Berufe (ohne Elektriker)"
+        label_en: "Building and related trades workers, excluding electricians"
+      - code: "72"
+        level: 2
+        label_de: "Metallarbeiter, Mechaniker und verwandte Berufe"
+        label_en: "Metal, machinery and related trades workers"
+      - code: "73"
+        level: 2
+        label_de: "Kunsthandwerker und verwandte Berufe, Drucker"
+        label_en: "Handicraft and printing workers"
+      - code: "74"
+        level: 2
+        label_de: "Elektriker und Elektroniker"
+        label_en: "Electrical and electronic trades workers"
+      - code: "75"
+        level: 2
+        label_de: "Berufe in der Nahrungsmittelverarbeitung, Holzbearbeitung, Bekleidungsherstellung und verwandte handwerkliche Fachkraefte"
+        label_en: "Food processing, wood working, garment and other craft and related trades workers"
+
+  - code: "8"
+    level: 1
+    label_de: "Bediener von Anlagen und Maschinen und Montageberufe"
+    label_en: "Plant and machine operators, and assemblers"
+    children:
+      - code: "81"
+        level: 2
+        label_de: "Bediener stationaerer Anlagen und Maschinen"
+        label_en: "Stationary plant and machine operators"
+      - code: "82"
+        level: 2
+        label_de: "Montageberufe"
+        label_en: "Assemblers"
+      - code: "83"
+        level: 2
+        label_de: "Fahrzeugfuehrer und Bediener mobiler Anlagen"
+        label_en: "Drivers and mobile plant operators"
+
+  - code: "9"
+    level: 1
+    label_de: "Hilfsarbeitskraefte"
+    label_en: "Elementary occupations"
+    children:
+      - code: "91"
+        level: 2
+        label_de: "Reinigungspersonal und Hilfskraefte"
+        label_en: "Cleaners and helpers"
+      - code: "92"
+        level: 2
+        label_de: "Hilfsarbeitskraefte in der Land- und Forstwirtschaft und Fischerei"
+        label_en: "Agricultural, forestry and fishery labourers"
+      - code: "93"
+        level: 2
+        label_de: "Hilfsarbeitskraefte im Bergbau, im Bau, bei der Herstellung von Waren und im Transportwesen"
+        label_en: "Labourers in mining, construction, manufacturing and transport"
+      - code: "94"
+        level: 2
+        label_de: "Hilfskraefte in der Nahrungsmittelzubereitung"
+        label_en: "Food preparation assistants"
+      - code: "95"
+        level: 2
+        label_de: "Strassenhaendler und verwandte Dienstleistungsberufe"
+        label_en: "Street and related sales and service workers"
+      - code: "96"
+        level: 2
+        label_de: "Abfallentsorgungsarbeiter und sonstige Hilfsarbeitskraefte"
+        label_en: "Refuse workers and other elementary workers"
+
+  - code: "0"
+    level: 1
+    label_de: "Angehoerige der regulaeren Streitkraefte"
+    label_en: "Armed forces occupations"
+    children:
+      - code: "01"
+        level: 2
+        label_de: "Offiziere der Streitkraefte"
+        label_en: "Commissioned armed forces officers"
+      - code: "02"
+        level: 2
+        label_de: "Unteroffiziere der Streitkraefte"
+        label_en: "Non-commissioned armed forces officers"
+      - code: "03"
+        level: 2
+        label_de: "Angehoerige der regulaeren Streitkraefte in sonstigen Raengen"
+        label_en: "Armed forces occupations, other ranks"

@@ -1,0 +1,84 @@
+Strategiepapier: Organisatorische Neuaufstellung 2025
+
+Klassifikation: Vertraulich — nur Geschäftsleitung und Programmleitung
+Erstellt von: Dr. Stefan Brandt, Chief Restructuring Officer
+Freigabe: Vorstand, 20. September 2024
+
+1. Ausgangslage
+
+Die FlexiTrade Solutions GmbH hat in den vergangenen 18 Monaten ein Umsatzwachstum
+von 34% auf EUR 48 Mio. verzeichnet. Die Belegschaft ist von 180 auf 310 Mitarbeiter
+gewachsen. Die bestehende Organisationsstruktur — aufgebaut für ein Unternehmen mit
+unter 150 Beschäftigten — stößt an ihre Grenzen.
+
+Die gescheiterte Einführung der Matrix-Organisation im Jahr 2022 (Projekt HELIX)
+hat gezeigt, dass ein reiner Top-Down-Ansatz ohne begleitendes Change Management
+nicht tragfähig ist. Das Vorhaben wurde nach 6 Monaten eingestellt, nachdem die
+Fluktuation in der Abteilung Softwareentwicklung auf 28% gestiegen war.
+
+Auch die Auslagerung des First-Level-Supports an den Dienstleister ServiceFirst GmbH
+in Rumänien wurde nach 9 Monaten rückgängig gemacht. Die Kundenzufriedenheit war
+von 4,1 auf 2,8 (5er-Skala) gesunken. Der finanzielle Schaden belief sich auf
+ca. EUR 620K (Transition + Rücktransition).
+
+2. Neue Organisationsstruktur
+
+Die Neuaufstellung sieht folgende Einheiten vor:
+
+Vorstand (3 Personen)
+├── Bereich Technologie (CTO: Jens Hoffmann)
+│   ├── Abteilung Plattformentwicklung (~85 FTE)
+│   ├── Abteilung Data Engineering (~30 FTE)
+│   └── Abteilung IT-Betrieb & Security (~25 FTE)
+├── Bereich Vertrieb & Kunden (CSO: Katarina Nowak)
+│   ├── Abteilung Enterprise Sales DACH
+│   ├── Abteilung Mid-Market & Partner
+│   └── Abteilung Customer Success (~40 FTE)
+├── Bereich Operations (COO: Dr. Stefan Brandt)
+│   ├── Abteilung Finanzen & Controlling
+│   ├── Abteilung People & Culture
+│   └── Abteilung Legal & Compliance
+└── Stabsstelle Strategie & M&A (Leitung: Prof. Dr. Eva Zimmermann)
+
+3. Schlüsselpositionen
+
+- Jens Hoffmann (CTO): Verantwortlich für die technische Integration nach
+  Übernahmen. Zuvor VP Engineering bei CloudMatrix AG.
+- Katarina Nowak (CSO): Aufbau des Enterprise-Vertriebs. Ehemalige
+  Regional Director EMEA bei DataForce Inc.
+- Prof. Dr. Eva Zimmermann: Strategieberatung und M&A-Pipeline.
+  Parallel Lehrstuhl für Digitale Transformation, Universität Mannheim.
+
+4. Standortstrategie
+
+Hauptsitz Freiburg bleibt erhalten (ca. 200 FTE). Der Standort Leipzig wird
+als Nearshore-Zentrum für Entwicklung ausgebaut (Ziel: 80 FTE bis Ende 2025).
+Der Standort Wien dient als Hub für den österreichischen und osteuropäischen
+Markt (15 FTE, Vertrieb und Customer Success).
+
+Geprüft und verworfen: Ein Standort in Lissabon als Remote-Hub. Die steuerlichen
+Rahmenbedingungen und Zeitzonenproblematik sprachen dagegen.
+
+5. M&A-Pipeline
+
+Aktuell befinden sich zwei Targets in der Evaluierung:
+- Ein Anbieter für Supply-Chain-Optimierung im Automotive-Sektor (Süddeutschland,
+  ca. 45 Mitarbeiter, geschätzter Umsatz EUR 6-8 Mio.)
+- Ein dänisches Startup im Bereich Predictive Maintenance für Windkraftanlagen
+  (12 Mitarbeiter, Seed-Phase, Technologie-Akquisition)
+
+Zeitrahmen: Letter of Intent bis Q1 2025, Closing bis Q3 2025.
+
+6. Risiken
+
+- Die Restrukturierung bindet erhebliche Management-Kapazität im kritischen
+  Wachstumsjahr 2025.
+- Kulturelle Integration nach Übernahmen ist historisch der größte Risikofaktor
+  (siehe gescheiterte HELIX-Integration 2022).
+- Der Fachkräftemarkt in Freiburg ist angespannt; Recruiting-Kosten pro
+  Softwareentwickler liegen bei ca. EUR 18K.
+
+Nächste Schritte:
+- Freigabe durch Aufsichtsrat bis 15. Oktober 2024
+- Kommunikation an Führungskräfte: 01. November 2024
+- All-Hands-Meeting: 15. November 2024

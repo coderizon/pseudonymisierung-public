@@ -1,0 +1,24 @@
+# 5er-Rundung: Percentage and KPI rounding rules
+#
+# Used for BUSINESS_METRIC generalization of percentage values.
+# Primary rule: round to nearest multiple of rounding_step.
+# Qualitative bands override rounding for extreme values.
+#
+# Boundary semantics: min inclusive, max exclusive.
+
+metadata:
+  name: "5er-Rundung"
+  metric_type: percentage
+
+rounding_step: 5
+
+qualitative_bands:
+  - min: null
+    max: 5
+    label_de: "niedrig einstellig"
+    label_en: "low single-digit"
+
+  - min: 80
+    max: null
+    label_de: "hoch (>80%)"
+    label_en: "high (>80%)"

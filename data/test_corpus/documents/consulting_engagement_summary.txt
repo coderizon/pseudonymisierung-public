@@ -1,0 +1,105 @@
+Engagement Summary: Digital Transformation Advisory
+
+Client: Meridian Aerospace Holdings plc
+Engagement ID: CC-094
+Period: March 2024 - December 2024
+Lead Consultant: Dr. Helena Fischer
+Partner: Jonathan Reeves, Managing Director Advisory EMEA
+
+1. Client Profile
+
+Meridian Aerospace Holdings plc is a mid-cap aerospace components manufacturer
+headquartered in Bristol, United Kingdom. The company employs approximately
+1,400 staff across three production sites (Bristol, Toulouse, and Hamburg)
+and generated GBP 185M in revenue in FY2023. Core business segments include
+precision turbine components (62% of revenue) and avionics housing systems (31%).
+
+Primary contact: Richard Calloway, VP Operational Technology
+Email: r.calloway@meridian-aerospace.co.uk
+Phone: +44 117 496 3200
+
+2. Engagement Scope
+
+Meridian engaged our firm to support the implementation of a unified Manufacturing
+Execution System (MES) across all three sites. The current landscape consists of
+three separate legacy systems:
+- Bristol: Siemens Opcenter (formerly Camstar), installed 2016
+- Toulouse: Dassault DELMIA, installed 2019
+- Hamburg: Custom SAP ME extension, maintained by interne IT since 2014
+
+The target architecture consolidates on PTC ThingWorx as the central IoT platform,
+with Rockwell FactoryTalk as the shop-floor execution layer. Integration with the
+existing Windchill PLM environment is a critical requirement.
+
+3. Key Findings
+
+a) Process Maturity Assessment
+   - Bristol site operates at CMMI Level 3 (Defined); Toulouse at Level 2 (Managed);
+     Hamburg at Level 1 (Initial). Harmonization to Level 3 across all sites is
+     the minimum viable target.
+   - The proprietary "AeroTrack" quality tracking system at the Bristol site handles
+     approximately 23,000 inspection records per month. Migration to the unified
+     MES must preserve full traceability for AS9100 compliance.
+
+b) Technology Gaps
+   - Hamburg's SAP ME extension lacks real-time OEE monitoring. Current OEE is
+     calculated manually with a 48-hour delay.
+   - No site currently supports digital twin integration. Meridian's competitor,
+     RollsTech Precision Ltd., has deployed digital twins for 40% of their
+     production lines, creating competitive pressure.
+
+c) Organizational Readiness
+   - The Head of Digital Manufacturing, Dr. Amir Patel, reports to the Bristol
+     CTO rather than the Group COO, creating misaligned incentives for cross-site
+     standardization.
+   - Toulouse site management (led by Marie-Claire Dubois, Directrice de Production)
+     has expressed concerns about losing autonomy over production scheduling.
+
+4. Financial Summary
+
+Category                          | Budget (GBP) | Actual (GBP) | Variance
+----------------------------------|--------------|--------------|----------
+Advisory fees                     | 480,000      | 462,000      | -3.8%
+Technology licensing (PTC/Rockwell)| 1,200,000   | 1,200,000    | 0.0%
+Implementation partner (Capgemini)| 2,100,000    | 2,340,000    | +11.4%
+Internal resource allocation      | 650,000      | 710,000      | +9.2%
+Travel and expenses               | 85,000       | 78,000       | -8.2%
+Total                             | 4,515,000    | 4,790,000    | +6.1%
+
+The GBP 275K overrun is primarily attributable to scope expansion at the Hamburg
+site, where the SAP ME decommissioning required additional data migration effort.
+
+5. Risk Register (Top 3)
+
+R1: Toulouse Works Council Approval
+    The Comité Social et Économique (CSE) must approve the MES transition under
+    French labor law. Timeline risk: 6-8 weeks for consultation process.
+    Mitigation: Early engagement via Marie-Claire Dubois, scheduled for October 2024.
+
+R2: AS9100 Re-certification
+    Changing the quality tracking system triggers a mandatory re-certification
+    audit. Estimated cost: GBP 45,000. Must be completed by March 2025.
+
+R3: Vendor Lock-in
+    PTC ThingWorx licensing terms include a 5-year minimum commitment.
+    Alternative evaluated and rejected: Siemens MindSphere (higher latency
+    for shop-floor integration, 340ms vs. 85ms p95).
+
+6. Recommendations
+
+- Proceed with phased rollout: Bristol (Q1 2025), Hamburg (Q3 2025), Toulouse (Q1 2026)
+- Appoint a Group-level Digital Manufacturing Director reporting to COO
+- Establish a cross-site Center of Excellence for MES operations in Bristol
+- Budget an additional GBP 180,000 for change management and training
+
+7. Lessons Learned
+
+The failed attempt to implement a unified ERP system in 2021 (Project ATLAS,
+abandoned after 14 months and GBP 1.2M spend) demonstrates that cross-site
+technology programs require executive sponsorship at Group level, not site level.
+This engagement has that sponsorship through the CEO, Dame Patricia Whitfield,
+but sustaining it through the 18-month implementation will require structured
+governance.
+
+Next review: Steering Committee, 28 October 2024
+Distribution: Client executive team + engagement team only

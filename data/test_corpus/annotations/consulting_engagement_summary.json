@@ -1,0 +1,317 @@
+{
+  "document": "consulting_engagement_summary.txt",
+  "language": "en",
+  "description": "English-language engagement summary for an aerospace MES transformation with financials, risk register, and cross-site coordination challenges",
+  "entities": [
+    {
+      "text": "Dr. Helena Fischer",
+      "category": "PERSON",
+      "context": "Lead Consultant: Dr. Helena Fischer"
+    },
+    {
+      "text": "Jonathan Reeves",
+      "category": "PERSON",
+      "context": "Partner: Jonathan Reeves, Managing Director Advisory EMEA"
+    },
+    {
+      "text": "Richard Calloway",
+      "category": "PERSON",
+      "context": "Primary contact: Richard Calloway, VP Operational Technology"
+    },
+    {
+      "text": "Dr. Amir Patel",
+      "category": "PERSON",
+      "context": "The Head of Digital Manufacturing, Dr. Amir Patel"
+    },
+    {
+      "text": "Marie-Claire Dubois",
+      "category": "PERSON",
+      "context": "Toulouse site management (led by Marie-Claire Dubois, Directrice de Production)"
+    },
+    {
+      "text": "Marie-Claire Dubois",
+      "category": "PERSON",
+      "context": "Early engagement via Marie-Claire Dubois, scheduled for October 2024"
+    },
+    {
+      "text": "Dame Patricia Whitfield",
+      "category": "PERSON",
+      "context": "sponsorship through the CEO, Dame Patricia Whitfield"
+    },
+    {
+      "text": "r.calloway@meridian-aerospace.co.uk",
+      "category": "CONTACT",
+      "context": "Email: r.calloway@meridian-aerospace.co.uk"
+    },
+    {
+      "text": "+44 117 496 3200",
+      "category": "CONTACT",
+      "context": "Phone: +44 117 496 3200"
+    },
+    {
+      "text": "Meridian Aerospace Holdings plc",
+      "category": "ORG_CLIENT",
+      "context": "Client: Meridian Aerospace Holdings plc"
+    },
+    {
+      "text": "Meridian",
+      "category": "ORG_CLIENT",
+      "context": "Meridian engaged our firm to support the implementation"
+    },
+    {
+      "text": "Meridian",
+      "category": "ORG_CLIENT",
+      "context": "Meridian's competitor, RollsTech Precision Ltd."
+    },
+    {
+      "text": "RollsTech Precision Ltd.",
+      "category": "ORG_PARTNER",
+      "context": "Meridian's competitor, RollsTech Precision Ltd., has deployed digital twins"
+    },
+    {
+      "text": "Capgemini",
+      "category": "ORG_PARTNER",
+      "context": "Implementation partner (Capgemini)"
+    },
+    {
+      "text": "Bristol",
+      "category": "LOCATION",
+      "context": "headquartered in Bristol, United Kingdom"
+    },
+    {
+      "text": "Toulouse",
+      "category": "LOCATION",
+      "context": "three production sites (Bristol, Toulouse, and Hamburg)"
+    },
+    {
+      "text": "Hamburg",
+      "category": "LOCATION",
+      "context": "three production sites (Bristol, Toulouse, and Hamburg)"
+    },
+    {
+      "text": "Bristol",
+      "category": "LOCATION",
+      "context": "Bristol: Siemens Opcenter (formerly Camstar), installed 2016"
+    },
+    {
+      "text": "Toulouse",
+      "category": "LOCATION",
+      "context": "Toulouse: Dassault DELMIA, installed 2019"
+    },
+    {
+      "text": "Hamburg",
+      "category": "LOCATION",
+      "context": "Hamburg: Custom SAP ME extension, maintained by interne IT since 2014"
+    },
+    {
+      "text": "Managing Director Advisory EMEA",
+      "category": "FUNCTION_TITLE",
+      "context": "Jonathan Reeves, Managing Director Advisory EMEA"
+    },
+    {
+      "text": "VP Operational Technology",
+      "category": "FUNCTION_TITLE",
+      "context": "Richard Calloway, VP Operational Technology"
+    },
+    {
+      "text": "Head of Digital Manufacturing",
+      "category": "FUNCTION_TITLE",
+      "context": "The Head of Digital Manufacturing, Dr. Amir Patel"
+    },
+    {
+      "text": "Directrice de Production",
+      "category": "FUNCTION_TITLE",
+      "context": "Marie-Claire Dubois, Directrice de Production"
+    },
+    {
+      "text": "aerospace components manufacturer",
+      "category": "INDUSTRY",
+      "context": "mid-cap aerospace components manufacturer headquartered in Bristol"
+    },
+    {
+      "text": "precision turbine components",
+      "category": "INDUSTRY",
+      "context": "Core business segments include precision turbine components (62% of revenue)"
+    },
+    {
+      "text": "avionics housing systems",
+      "category": "INDUSTRY",
+      "context": "avionics housing systems (31%)"
+    },
+    {
+      "text": "Manufacturing Execution System",
+      "category": "PRODUCT",
+      "context": "implementation of a unified Manufacturing Execution System (MES) across all three sites"
+    },
+    {
+      "text": "AeroTrack",
+      "category": "PRODUCT",
+      "context": "The proprietary \"AeroTrack\" quality tracking system at the Bristol site"
+    },
+    {
+      "text": "Siemens Opcenter",
+      "category": "TECHNOLOGY",
+      "context": "Bristol: Siemens Opcenter (formerly Camstar), installed 2016"
+    },
+    {
+      "text": "Dassault DELMIA",
+      "category": "TECHNOLOGY",
+      "context": "Toulouse: Dassault DELMIA, installed 2019"
+    },
+    {
+      "text": "SAP ME",
+      "category": "TECHNOLOGY",
+      "context": "Hamburg: Custom SAP ME extension"
+    },
+    {
+      "text": "PTC ThingWorx",
+      "category": "TECHNOLOGY",
+      "context": "consolidates on PTC ThingWorx as the central IoT platform"
+    },
+    {
+      "text": "Rockwell FactoryTalk",
+      "category": "TECHNOLOGY",
+      "context": "Rockwell FactoryTalk as the shop-floor execution layer"
+    },
+    {
+      "text": "Windchill PLM",
+      "category": "TECHNOLOGY",
+      "context": "Integration with the existing Windchill PLM environment"
+    },
+    {
+      "text": "Siemens MindSphere",
+      "category": "TECHNOLOGY",
+      "context": "Alternative evaluated and rejected: Siemens MindSphere"
+    },
+    {
+      "text": "AeroTrack",
+      "category": "PROCESS_ARTIFACT",
+      "context": "The proprietary \"AeroTrack\" quality tracking system handles approximately 23,000 inspection records per month"
+    },
+    {
+      "text": "CC-094",
+      "category": "CONTRACT",
+      "context": "Engagement ID: CC-094"
+    },
+    {
+      "text": "ATLAS",
+      "category": "CONTRACT",
+      "context": "failed attempt to implement a unified ERP system in 2021 (Project ATLAS)"
+    },
+    {
+      "text": "1,400",
+      "category": "BUSINESS_METRIC",
+      "context": "employs approximately 1,400 staff"
+    },
+    {
+      "text": "GBP 185M",
+      "category": "BUSINESS_METRIC",
+      "context": "generated GBP 185M in revenue in FY2023"
+    },
+    {
+      "text": "62%",
+      "category": "BUSINESS_METRIC",
+      "context": "precision turbine components (62% of revenue)"
+    },
+    {
+      "text": "31%",
+      "category": "BUSINESS_METRIC",
+      "context": "avionics housing systems (31%)"
+    },
+    {
+      "text": "23,000 inspection records per month",
+      "category": "BUSINESS_METRIC",
+      "context": "handles approximately 23,000 inspection records per month"
+    },
+    {
+      "text": "40%",
+      "category": "BUSINESS_METRIC",
+      "context": "deployed digital twins for 40% of their production lines"
+    },
+    {
+      "text": "GBP 480,000",
+      "category": "BUSINESS_METRIC",
+      "context": "Advisory fees | 480,000"
+    },
+    {
+      "text": "GBP 1,200,000",
+      "category": "BUSINESS_METRIC",
+      "context": "Technology licensing (PTC/Rockwell) | 1,200,000"
+    },
+    {
+      "text": "GBP 2,340,000",
+      "category": "BUSINESS_METRIC",
+      "context": "Implementation partner (Capgemini) | Actual 2,340,000"
+    },
+    {
+      "text": "GBP 4,790,000",
+      "category": "BUSINESS_METRIC",
+      "context": "Total | Actual 4,790,000"
+    },
+    {
+      "text": "GBP 275K",
+      "category": "BUSINESS_METRIC",
+      "context": "The GBP 275K overrun is primarily attributable to scope expansion"
+    },
+    {
+      "text": "GBP 45,000",
+      "category": "BUSINESS_METRIC",
+      "context": "Estimated cost: GBP 45,000"
+    },
+    {
+      "text": "GBP 180,000",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget an additional GBP 180,000 for change management"
+    },
+    {
+      "text": "GBP 1.2M",
+      "category": "BUSINESS_METRIC",
+      "context": "abandoned after 14 months and GBP 1.2M spend"
+    },
+    {
+      "text": "March 2024 - December 2024",
+      "category": "TEMPORAL",
+      "context": "Period: March 2024 - December 2024"
+    },
+    {
+      "text": "October 2024",
+      "category": "TEMPORAL",
+      "context": "scheduled for October 2024"
+    },
+    {
+      "text": "March 2025",
+      "category": "TEMPORAL",
+      "context": "Must be completed by March 2025"
+    },
+    {
+      "text": "Q1 2025",
+      "category": "TEMPORAL",
+      "context": "phased rollout: Bristol (Q1 2025)"
+    },
+    {
+      "text": "Q3 2025",
+      "category": "TEMPORAL",
+      "context": "Hamburg (Q3 2025)"
+    },
+    {
+      "text": "Q1 2026",
+      "category": "TEMPORAL",
+      "context": "Toulouse (Q1 2026)"
+    },
+    {
+      "text": "28 October 2024",
+      "category": "TEMPORAL",
+      "context": "Next review: Steering Committee, 28 October 2024"
+    },
+    {
+      "text": "Project ATLAS abandoned after 14 months and GBP 1.2M spend",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "The failed attempt to implement a unified ERP system in 2021 (Project ATLAS, abandoned after 14 months and GBP 1.2M spend) demonstrates that cross-site technology programs require executive sponsorship at Group level"
+    },
+    {
+      "text": "Siemens MindSphere evaluated and rejected",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "Alternative evaluated and rejected: Siemens MindSphere (higher latency for shop-floor integration, 340ms vs. 85ms p95)"
+    }
+  ]
+}

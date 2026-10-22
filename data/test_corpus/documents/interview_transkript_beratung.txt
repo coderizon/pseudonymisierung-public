@@ -1,0 +1,98 @@
+Interview-Transkript: Beratungsprojekt Organisationsentwicklung
+
+Projekt: CC-089 (NeuroTech Dynamics GmbH)
+Datum: 18. September 2024
+Interviewer: Laura Engel, Senior Consultant
+Interviewpartner: Dr. Klaus Riedel, Geschäftsführer NeuroTech Dynamics GmbH
+Ort: Büro des Geschäftsführers, Karlsruhe
+Dauer: 55 Minuten
+
+[Aufnahme beginnt]
+
+Laura Engel: Herr Dr. Riedel, vielen Dank, dass Sie sich die Zeit nehmen.
+Können Sie uns zunächst einen Überblick über die aktuelle Situation geben?
+
+Dr. Klaus Riedel: Gerne, Frau Engel. Wir stehen an einem kritischen Punkt.
+NeuroTech Dynamics wurde 2018 gegründet und ist seitdem auf 95 Mitarbeiter
+gewachsen. Unser Kerngeschäft ist die Entwicklung von Neuromorphic-Computing-
+Lösungen für die Medizintechnik-Branche. Wir haben letztes Jahr einen Umsatz
+von EUR 12,4 Mio. erzielt, mit einer Marge von 22%.
+
+Laura Engel: Was hat Sie dazu bewogen, externe Beratung hinzuzuziehen?
+
+Dr. Klaus Riedel: Zwei Dinge. Erstens hatten wir 2023 eine strategische
+Partnerschaft mit Siemens Healthineers angebahnt. Das Ziel war die Integration
+unserer Algorithmen in deren Bildgebungssysteme. Nach 8 Monaten Verhandlung
+ist das gescheitert — die Compliance-Anforderungen von Siemens waren für
+unsere Größe nicht leistbar. Wir haben ca. EUR 380K in die Vorbereitung
+investiert, ohne Ergebnis. Das war ein harter Rückschlag.
+
+Laura Engel: Was war der zweite Auslöser?
+
+Dr. Klaus Riedel: Unser CTO, Frau Prof. Yilmaz, hat im März 2024 das
+Unternehmen verlassen, um eine Professur an der ETH Zürich anzutreten.
+Sie war die technische Visionärin und hatte die gesamte Patentlandschaft
+aufgebaut — 14 Patente, davon 3 im Bereich neuronaler Signalverarbeitung.
+Ihr Weggang hat eine Lücke hinterlassen, die wir intern nicht füllen konnten.
+
+Laura Engel: Wie haben Sie darauf reagiert?
+
+Dr. Klaus Riedel: Wir haben versucht, intern zu reorganisieren. Die Leitung
+der Abteilung Forschung & Entwicklung hat Dr. Tobias Nolte übernommen, unser
+bisheriger Principal Engineer. Gleichzeitig haben wir das Team Algorithmen-
+entwicklung unter Sarah Kim, unserer Lead ML Engineer, als eigenständige
+Einheit ausgegründet. Das funktioniert technisch, aber strategisch fehlt
+die Klammer.
+
+Laura Engel: Welche strategischen Optionen sehen Sie aktuell?
+
+Dr. Klaus Riedel: Drei Szenarien liegen auf dem Tisch. Erstens: Wir suchen
+einen strategischen Investor, der uns im Medtech-Bereich positioniert.
+Kontakte zu BioVentures Capital in München laufen bereits. Zweitens:
+Wir diversifizieren in den Automotive-Bereich — unser Algorithmus für
+Signalverarbeitung lässt sich auch für autonomes Fahren adaptieren.
+Continental hat im Juli informell angefragt. Drittens: Wir bleiben auf
+Kurs und versuchen, die Siemens-Partnerschaft über einen kleineren Scope
+neu aufzurollen.
+
+Laura Engel: Gibt es weitere gescheiterte Initiativen, die wir kennen sollten?
+
+Dr. Klaus Riedel: Ja, 2022 hatten wir versucht, ein eigenes SaaS-Produkt
+für Kliniken zu entwickeln — die "NeuroScan Cloud Platform". Nach 12 Monaten
+und EUR 520K Investition haben wir festgestellt, dass der regulatorische
+Aufwand für ein MDR-konformes Cloud-Produkt unsere Kapazitäten übersteigt.
+Wir haben das Projekt eingestellt und die Technologie in unser On-Premise-
+Angebot zurückintegriert.
+
+Laura Engel: Wie sieht Ihr aktuelles Kundenportfolio aus?
+
+Dr. Klaus Riedel: Wir haben drei Hauptkunden. Der größte ist ein
+Universitätsklinikum in Süddeutschland, das ca. 40% unseres Umsatzes
+ausmacht. Dann ein mittelständischer Medizintechnik-Hersteller in der
+Schweiz mit 25%. Und ein Forschungsinstitut der Fraunhofer-Gesellschaft
+mit 20%. Der Rest sind kleinere Projekte.
+
+Laura Engel: Die Konzentration auf wenige Kunden ist ein Risiko.
+
+Dr. Klaus Riedel: Absolut. Wenn das Universitätsklinikum den Vertrag
+nicht verlängert — Laufzeit endet im Juni 2025 — haben wir ein
+existenzielles Problem. Deshalb ist die Diversifizierung so dringend.
+
+Laura Engel: Wie viele Mitarbeiter arbeiten aktuell in der Entwicklung?
+
+Dr. Klaus Riedel: 52 von 95 sind in R&D. Davon 18 in der Algorithmik,
+14 in Hardware-Integration, 12 in Software-Plattform und 8 im
+Qualitätsmanagement. Unsere Personalkosten liegen bei EUR 7,2 Mio.
+pro Jahr, das sind 58% des Umsatzes.
+
+Laura Engel: Vielen Dank, Herr Dr. Riedel. Das gibt uns ein klares Bild.
+Wir werden auf Basis dieses Gesprächs eine Ersteinschätzung vorbereiten.
+
+Dr. Klaus Riedel: Sehr gut. Bitte koordinieren Sie sich mit meiner
+Assistentin, Frau Petersen. Ihre E-Mail ist a.petersen@neurotech-dynamics.de,
+Telefon +49 721 8899-100.
+
+[Aufnahme endet]
+
+Nächster Schritt: Ersteinschätzung bis 25. September 2024
+Verteiler: Projektteam intern (Laura Engel, Maximilian Braun, Dr. Yuki Tanaka)

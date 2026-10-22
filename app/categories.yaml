@@ -1,0 +1,301 @@
+# Pseudonymisierungs-Kategorien: Single Source of Truth
+# Basiert auf Pseudonymisierungskonzept v1
+#
+# Zwei-Klassen-Architektur:
+#   Klasse 1 (PII): Konsistente Token-Ersetzung, deterministisch
+#   Klasse 2 (Geschaeftsgeheimnisse): Kontextabhaengige Generalisierung via LLM
+
+profile: standard
+
+# Inhalte, die NICHT pseudonymisiert werden
+exclusions:
+  - Allgemeine Fachbegriffe und Methodiken (Agile, Lean, SAFe, Scrum, Kanban, Design Thinking)
+  - Generische Rollentypen (Project Manager, Berater, Abteilungsleiter, Consultant, Analyst)
+  - Governance-Konzepte und Design Principles
+  - Organisationstheoretische Frameworks (Mintzberg, Luhmann, Kotter, McKinsey 7-S)
+  - Allgemeine Prozessbezeichnungen (Onboarding, Recruiting, Budgetplanung, Reporting)
+  - Branchenallgemeine Standards und Normen (ISO, ITIL, COBIT, TOGAF, PRINCE2)
+  - Programmiersprachen und generische Technologiebegriffe (Python, Java, REST, API, Cloud, SaaS)
+
+categories:
+  # ── Klasse 1: PII (immer pseudonymisieren) ──────────────────────────────
+
+  PERSON:
+    class: 1
+    active: true
+    action: pseudonymize
+    protection_level: high
+    description: Vor- und Nachnamen, auch Teilnamen, Titel
+    examples:
+      de: ["Dr. Thomas Schmidt", "Frau Mueller", "Herr Brenner"]
+      en: ["Dr. Smith", "Ms. Johnson", "Mr. Williams"]
+    transformation: >
+      Konsistentes Pseudonym mit Rollenerhalt: PERSON_A, PERSON_B.
+      Ueber gesamtes Dokumentenkorpus konsistent.
+    pseudonym_prefix: "PERSON"
+
+  CONTACT:
+    class: 1
+    active: true
+    action: suppress
+    protection_level: high
+    description: E-Mail-Adressen, Telefonnummern, Faxnummern, postalische Adressen
+    examples:
+      de: ["mueller@firma.de", "+49 761 12345", "Musterstr. 12, 79100 Freiburg"]
+      en: ["smith@company.com", "+1 555-0123", "123 Main St, Springfield"]
+    transformation: >
+      Vollstaendige Entfernung (loeschen, nicht ersetzen).
+      Kontaktdaten werden durch [KONTAKTDATEN ENTFERNT] ersetzt.
+
+  ORG_CLIENT:
+    class: 1
+    active: true
+    action: pseudonymize
+    protection_level: high
+    description: Mandantenname, Tochtergesellschaften, Marken des Mandanten
+    examples:
+      de: ["AeroTech Solutions GmbH", "DataServices AG", "Stadtwerke Freiburg"]
+      en: ["AeroTech Solutions Inc.", "DataServices Corp."]
+    transformation: >
+      Typ-erhaltende Ersetzung: "mittelstaendisches IT-Unternehmen",
+      "europaeischer Industriekonzern". Rechtsform wird generalisiert.
+    pseudonym_prefix: "ORG_CLIENT"
+
+  ORG_UNIT:
+    class: 1
+    active: true
+    action: pseudonymize
+    protection_level: high
+    description: Abteilungen, Gremien, Teams, Komitees des Mandanten
+    examples:
+      de: ["Abteilung Digital Innovation", "Capability Center", "Steering Committee Q3"]
+      en: ["Digital Innovation Department", "Capability Center", "Q3 Steering Committee"]
+    transformation: >
+      Funktionserhaltend: "[Steuerungseinheit]", "[Fachbereich A]",
+      "[Leitungsgremium]". Funktion bleibt erkennbar, Name wird abstrahiert.
+    pseudonym_prefix: "ORG_UNIT"
+
+  LOCATION:
+    class: 1
+    active: true
+    action: pseudonymize
+    protection_level: high
+    description: Firmensitz, Projektstandorte, konkrete Ortsangaben
+    examples:
+      de: ["Freiburg", "Standort Muenchen", "Werk Sindelfingen"]
+      en: ["Munich office", "Springfield plant", "London headquarters"]
+    transformation: >
+      Generalisierung auf Region: "[Standort Sueddeutschland]",
+      "[europaeischer Standort]". Nur regionale Zuordnung bleibt.
+    pseudonym_prefix: "LOCATION"
+
+  # ── Klasse 2: Geschaeftsgeheimnisse (kontextabhaengig generalisieren) ───
+
+  FUNCTION_TITLE:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Spezifische Jobtitel und Funktionsbezeichnungen, die 1:1 identifizierend sind
+    examples:
+      de: ["COE Lead Digital Innovation", "VP European Fleet Sales", "Head of DataServices"]
+      en: ["VP European Fleet Sales", "COE Lead Digital Innovation", "Head of DataServices"]
+    transformation: >
+      ISCO-08 Level 2 Mapping. Nur wenn Titel 1:1 identifizierend ist.
+      Generische Titel (Project Manager, Berater) werden NICHT veraendert.
+    reference_standard: ISCO-08
+    generalization_level: 2
+    pseudonym_prefix: "FUNCTION"
+
+  ORG_PARTNER:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Vendoren, Lieferanten, Kooperationspartner (nicht der Mandant selbst)
+    examples:
+      de: ["DataRobot", "SAP", "McKinsey"]
+      en: ["DataRobot", "SAP", "McKinsey", "Accenture"]
+    transformation: >
+      Typ-erhaltend + Tier: "[Tier-1 Automotive OEM]",
+      "[Cloud-Infrastruktur-Provider]", "[Strategieberatung]".
+    reference_standard: GeschGehG
+    pseudonym_prefix: "ORG_PARTNER"
+
+  INDUSTRY:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Branchenspezifische Angaben, die den Mandanten einordnen
+    examples:
+      de: ["Aviation AI", "Automobilzulieferer Sueddeutschland", "Pharma-Logistik"]
+      en: ["Aviation AI", "Automotive supplier", "Pharma logistics"]
+    transformation: >
+      NACE-basierte Generalisierung. Standard: Level 1 (Sektorbuchstabe).
+      "Aviation AI" wird zu "[Informations- und Kommunikationssektor (J)]".
+    reference_standard: NACE Rev. 2
+    generalization_level: 1
+    pseudonym_prefix: "INDUSTRY"
+
+  PRODUCT:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Produktnamen, proprietaere Loesungen, Software-Produkte
+    examples:
+      de: ["Crew Absence Prediction Engine", "SAP S/4HANA", "Salesforce CRM"]
+      en: ["Crew Absence Prediction Engine", "SAP S/4HANA", "Salesforce CRM"]
+    transformation: >
+      Capability Mapping: Faehigkeit erhalten, Vendor entfernen.
+      "SAP S/4HANA" wird zu "[ERP-System]".
+      "Crew Absence Prediction" wird zu "[ML-basierte Prognose-Loesung fuer Personalplanung]".
+    reference_standard: Capability Mapping
+    pseudonym_prefix: "PRODUCT"
+
+  PROCESS_ARTIFACT:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Proprietaere Prozesse, interne Tools, Artefaktbezeichnungen
+    examples:
+      de: ["Proprietaeres Onboarding Portal X", "Priorisierungsmatrix Hauptamt"]
+      en: ["Proprietary Onboarding Portal X", "Prioritization Matrix"]
+    transformation: >
+      APQC PCF Mapping: "Proprietaeres Onboarding Portal" wird zu
+      "Customer Onboarding (APQC 3.2.2)". Prozesstyp erhalten, Name abstrahieren.
+    reference_standard: APQC PCF
+    pseudonym_prefix: "PROCESS"
+
+  BUSINESS_METRIC:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: >
+      Geschäftsrelevante numerische Kennzahlen mit konkretem Zahlenwert:
+      Umsätze, Margen, Mitarbeiterzahlen, Projektzahlen, Kostenangaben,
+      Produktionsmengen, Prozentangaben. Setzt einen konkreten numerischen
+      Wert voraus.
+    examples:
+      de: ["~100 FTE", "EUR 720K Einsparung", "14,7% Marge", "50%", "60% Overhead", "23 Projekte", "340 Vorhersagen/Tag"]
+      en: ["~100 FTE", "EUR 720K savings", "14.7% margin", "50%", "60% overhead", "23 projects", "340 predictions/day"]
+    negative_examples:
+      de:
+        - "Stadthaushalt-Programm (Programmbezeichnung ohne Zahlenwert)"
+        - "eine Praktikantin (Personenbeschreibung ohne Zahlenwert)"
+        - "1,5 GB Logdaten (generische Speichergröße)"
+        - "100 GB Speicher (generische Speichergröße)"
+        - "14 Gigabyte Archivdatei (generische Speichergröße)"
+        - "200 MB/s Bandbreite (generischer Netzwerkdurchsatz)"
+        - "3 Fehlermeldungen im Log (IT-Troubleshooting-Zahl)"
+      en:
+        - "city budget program (program label with no numeric value)"
+        - "an intern (person description with no numeric value)"
+        - "5 GB log data (generic storage size)"
+        - "100 GB storage (generic storage size)"
+        - "14 gigabytes archive (generic storage size)"
+        - "500 MB bandwidth (generic network throughput)"
+        - "3 log errors (IT troubleshooting count)"
+    transformation: >
+      Banding-Tabellen:
+      Mitarbeiter (Dunbar/OD): <15, 15-50, 50-150, 150-500, >500.
+      Umsatz/Budget (EU-SME/HGB): <2 Mio, 2-10 Mio, 10-50 Mio, >50 Mio.
+      Prozente: 5er-Rundung oder qualitative Angabe.
+    reference_standard: EU-SME, HGB 267, Dunbar
+    pseudonym_prefix: "METRIC"
+
+  TEMPORAL:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Spezifische Meilensteine, Mandate-Daten, Projektzeitraeume
+    examples:
+      de: ["14.03.2026", "Go-Live Q2 2025", "KW 16", "30.04.2026"]
+      en: ["March 14, 2026", "Q2 2025 go-live", "week 16"]
+    transformation: >
+      Relative Angaben: "Q3 des Vorjahres", "Mitte des Projektjahres",
+      "im Folgemonat". Keine absoluten Daten.
+    reference_standard: Mosaikschutz
+    pseudonym_prefix: "TEMPORAL"
+
+  CONTRACT:
+    class: 2
+    active: true
+    action: pseudonymize
+    protection_level: medium
+    description: Vertragsnummern, Projekt-IDs, interne Referenzcodes
+    examples:
+      de: ["CC-047", "Vertrag Nr. 2024-0815", "Projekt AURORA"]
+      en: ["CC-047", "Contract No. 2024-0815", "Project AURORA"]
+    transformation: >
+      Konsistente Pseudonymisierung: "[Vertrag_001]", "[Projekt_A]".
+      Referenztyp bleibt erkennbar.
+    pseudonym_prefix: "CONTRACT"
+
+  TECHNOLOGY:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: medium
+    description: Vendor-spezifische APIs, Tech-Stacks, konkrete Technologie-Implementierungen
+    examples:
+      de: ["Jeppesen Crew Management System", "Azure DevOps", "REST-API von DataRobot"]
+      en: ["Jeppesen Crew Management System", "Azure DevOps", "DataRobot REST API"]
+    transformation: >
+      Capability Mapping: Architekturlogik erhalten, Vendor ersetzen.
+      "Azure DevOps" wird zu "[Cloud-basierte Entwicklungsplattform]".
+      "Jeppesen Crew Management" wird zu "[Crew-Management-System]".
+    reference_standard: Capability Mapping
+    pseudonym_prefix: "TECHNOLOGY"
+
+  STRATEGY:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: maximum
+    description: M&A-Targets, Markteintrittplaene, strategische Initiativen
+    examples:
+      de: ["Expansion nach Asien durch Akquisition von XYZ", "Markteintritt Suedostasien"]
+      en: ["Asian expansion via XYZ acquisition", "Southeast Asian market entry"]
+    transformation: >
+      Hoechste Schutzstufe. Starke Generalisierung oder Suppression.
+      Nur Metabeschreibung erhalten: "[internationale Expansionsstrategie]".
+    reference_standard: GeschGehG
+    pseudonym_prefix: "STRATEGY"
+
+  NEGATIVE_KNOWHOW:
+    class: 2
+    active: true
+    action: generalize
+    protection_level: maximum
+    description: Gescheiterte Strategien, verworfene Ansaetze, dokumentierte Fehler
+    examples:
+      de: ["Das Outsourcing an Provider Y wurde nach 6 Monaten abgebrochen"]
+      en: ["The outsourcing to Provider Y was terminated after 6 months"]
+    transformation: >
+      Generalisieren oder supprimieren: "ein vergleichbares Vorhaben
+      wurde eingestellt". Konkrete Partner und Zeitraeume entfernen.
+    reference_standard: GeschGehG 2
+    pseudonym_prefix: "NEG_KNOWHOW"
+
+  QUASI_ID:
+    class: 2
+    active: true
+    action: flag
+    protection_level: high
+    description: >
+      Keine eigene Erkennung. Pruefschritt nach Pseudonymisierung:
+      Sind identifizierende Kombinationen aus Rolle + Abteilung +
+      Standort + Groesse verblieben?
+    examples:
+      de: ["IT-Dienstleister + Sueddeutschland + mittelstaendisch + Aviation"]
+      en: ["IT consultancy + Southern Germany + mid-size + Aviation"]
+    transformation: >
+      Post-Processing Check: Identifizierende Attributkombinationen
+      erkennen und zusaetzlich generalisieren. Mosaikeffekt-Pruefung.
+    reference_standard: Mosaikeffekt
+    pseudonym_prefix: "QUASI_ID"

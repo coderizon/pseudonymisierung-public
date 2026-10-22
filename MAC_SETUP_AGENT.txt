@@ -1,0 +1,7 @@
+Klone https://github.com/coderizon/pseudonymisierung-public und richte Engine und neue Review-Weboberfläche vollständig auf diesem Mac ein. Lies zuerst README.md und prüfe macOS-Version, Apple Silicon/Intel, RAM und freien Speicher.
+
+Installiere die nötigen Abhängigkeiten, Python 3.12, natives Ollama und Poppler. Lege .venv und .env an. Wähle ein verfügbares lokales Modell passend zum RAM; lade gemma4:26b nicht ungeprüft. Nutze scripts/start-ui.sh für die Review-UI auf 127.0.0.1:8789 und bei Bedarf scripts/start-engine.sh für die API auf Port 8000. Setze ein eigenes lokales UI-Passwort. Übernimm keine Linux-/CUDA-/systemd-Konfiguration.
+
+Führe die dokumentierten Tests aus und prüfe mit synthetischen TXT-, PDF-, DOCX- und XLSX-Dateien den gesamten Ablauf: Upload, Verarbeitung, Prüfung/Korrektur, Freigabe und Download. Behebe nötige Mac-Kompatibilitätsprobleme im lokalen Checkout und teste erneut. Keine echten Dokumente an Cloud-Dienste senden; keine bestehende Konfiguration oder Daten löschen.
+
+Beende erst mit funktionierender UI, erfolgreichem End-to-End-Test und einer kurzen Start-/Stopp-Anleitung samt URLs und gewähltem Modell. Falls Hardware oder Berechtigungen blockieren, nenne konkret den Blocker, statt Erfolg zu behaupten.

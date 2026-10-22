@@ -1,0 +1,132 @@
+{
+  "document": "strategiesitzung_q4.txt",
+  "language": "de",
+  "description": "Protokoll einer Strategiesitzung mit Finanzbericht, M&A-Planung und Personalthemen",
+  "entities": [
+    {
+      "text": "Dr. Thomas Müller",
+      "category": "PERSON",
+      "context": "Teilnehmer: Dr. Thomas Müller (CEO), Sabine Krause (CFO)"
+    },
+    {
+      "text": "Sabine Krause",
+      "category": "PERSON",
+      "context": "Teilnehmer: Dr. Thomas Müller (CEO), Sabine Krause (CFO), Jens Hoffmann (CTO)"
+    },
+    {
+      "text": "Jens Hoffmann",
+      "category": "PERSON",
+      "context": "Sabine Krause (CFO), Jens Hoffmann (CTO)"
+    },
+    {
+      "text": "Dr. Müller",
+      "category": "PERSON",
+      "context": "Dr. Müller präsentiert den Plan zur Expansion nach Südostasien."
+    },
+    {
+      "text": "Maria Weber",
+      "category": "PERSON",
+      "context": "Die Abteilungsleiterin Personal, Maria Weber, hat den Vorschlag unterbreitet"
+    },
+    {
+      "text": "Lisa Schmidt",
+      "category": "PERSON",
+      "context": "Protokollführung: Lisa Schmidt, Assistenz der Geschäftsleitung"
+    },
+    {
+      "text": "m.weber@example.org",
+      "category": "CONTACT",
+      "context": "Kontakt: m.weber@example.org, Tel: +49 69 1234567."
+    },
+    {
+      "text": "+49 69 1234567",
+      "category": "CONTACT",
+      "context": "Kontakt: m.weber@example.org, Tel: +49 69 1234567."
+    },
+    {
+      "text": "Frankfurt am Main",
+      "category": "LOCATION",
+      "context": "Standort: Hauptsitz Frankfurt am Main, Konferenzraum 3A"
+    },
+    {
+      "text": "München",
+      "category": "LOCATION",
+      "context": "Der Standort München verzeichnete ein Wachstum von 31%"
+    },
+    {
+      "text": "Berlin",
+      "category": "LOCATION",
+      "context": "während Berlin stagnierte"
+    },
+    {
+      "text": "Singapur",
+      "category": "LOCATION",
+      "context": "TechVentures Pte. Ltd. in Singapur soll bis März 2025 abgeschlossen werden"
+    },
+    {
+      "text": "Hamburg",
+      "category": "LOCATION",
+      "context": "das Vergütungsmodell für die Standorte Hamburg und Düsseldorf anzupassen"
+    },
+    {
+      "text": "Düsseldorf",
+      "category": "LOCATION",
+      "context": "das Vergütungsmodell für die Standorte Hamburg und Düsseldorf anzupassen"
+    },
+    {
+      "text": "23%",
+      "category": "BUSINESS_METRIC",
+      "context": "der Umsatz im Q3 um 23% auf 4,2 Mio. EUR gestiegen ist"
+    },
+    {
+      "text": "4,2 Mio. EUR",
+      "category": "BUSINESS_METRIC",
+      "context": "der Umsatz im Q3 um 23% auf 4,2 Mio. EUR gestiegen ist"
+    },
+    {
+      "text": "18,5%",
+      "category": "BUSINESS_METRIC",
+      "context": "Die EBITDA-Marge lag bei 18,5%, was über dem Branchendurchschnitt von 12% liegt"
+    },
+    {
+      "text": "31%",
+      "category": "BUSINESS_METRIC",
+      "context": "Der Standort München verzeichnete ein Wachstum von 31%"
+    },
+    {
+      "text": "8,5 Mio. EUR",
+      "category": "BUSINESS_METRIC",
+      "context": "Das Investitionsvolumen beträgt 8,5 Mio. EUR."
+    },
+    {
+      "text": "TechVentures Pte. Ltd.",
+      "category": "ORG_PARTNER",
+      "context": "Die Akquisition der Firma TechVentures Pte. Ltd. in Singapur"
+    },
+    {
+      "text": "Expansion nach Südostasien",
+      "category": "STRATEGY",
+      "context": "Dr. Müller präsentiert den Plan zur Expansion nach Südostasien."
+    },
+    {
+      "text": "Akquisition der Firma TechVentures Pte. Ltd. in Singapur soll bis März 2025 abgeschlossen werden",
+      "category": "STRATEGY",
+      "context": "Die Akquisition der Firma TechVentures Pte. Ltd. in Singapur soll bis März 2025 abgeschlossen werden."
+    },
+    {
+      "text": "15. November 2024",
+      "category": "TEMPORAL",
+      "context": "Datum: 15. November 2024"
+    },
+    {
+      "text": "März 2025",
+      "category": "TEMPORAL",
+      "context": "in Singapur soll bis März 2025 abgeschlossen werden"
+    },
+    {
+      "text": "12. Dezember 2024",
+      "category": "TEMPORAL",
+      "context": "Nächster Termin: 12. Dezember 2024, 14:00 Uhr"
+    }
+  ]
+}

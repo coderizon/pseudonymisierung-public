@@ -1,0 +1,37 @@
+# Dunbar/OD Banding: Employee headcount classification
+#
+# Based on organizational psychology thresholds (Dunbar, organizational design).
+# Used for BUSINESS_METRIC generalization of employee/FTE counts.
+#
+# Boundary semantics: min inclusive, max exclusive.
+
+metadata:
+  name: "Dunbar/OD Banding"
+  metric_type: headcount
+  unit: FTE
+
+bands:
+  - min: null
+    max: 15
+    label_de: "Kleines Team (<15)"
+    label_en: "Small team (<15)"
+
+  - min: 15
+    max: 50
+    label_de: "Mittleres Team (15-50)"
+    label_en: "Medium team (15-50)"
+
+  - min: 50
+    max: 150
+    label_de: "Mittelstaendisch (50-150)"
+    label_en: "Midsize (50-150)"
+
+  - min: 150
+    max: 500
+    label_de: "Grosses Unternehmen (150-500)"
+    label_en: "Large enterprise (150-500)"
+
+  - min: 500
+    max: null
+    label_de: "Konzernbereich (>500)"
+    label_en: "Enterprise division (>500)"

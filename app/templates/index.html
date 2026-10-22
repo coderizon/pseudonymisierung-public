@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudonymisierungs-Workflow</title>
+    <style>
+        :root {
+            --bg: #f0f2f5;
+            --card: #ffffff;
+            --border: #e1e4e8;
+            --text: #1a1a2e;
+            --text-secondary: #5a6270;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --green: #16a34a;
+            --green-bg: #dcfce7;
+            --red: #dc2626;
+            --red-bg: #fee2e2;
+            --yellow: #ca8a04;
+            --yellow-bg: #fef9c3;
+            --gray: #9ca3af;
+            --gray-bg: #f3f4f6;
+            --purple: #7c3aed;
+            --purple-bg: #f3e8ff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+
+        .layout { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
+
+        /* Header */
+        .header { margin-bottom: 2rem; }
+        .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+        .header p { color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.25rem; }
+
+        /* Cards */
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1rem; }
+        .card-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+        .card-header h2 { font-size: 0.9375rem; font-weight: 600; }
+        .card-body { padding: 1.25rem; }
+
+        /* Status */
+        .badge { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.25rem 0.625rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; }
+        .badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
+        .badge-ready { background: var(--green-bg); color: var(--green); }
+        .badge-ready::before { background: var(--green); }
+        .badge-not-ready { background: var(--red-bg); color: var(--red); }
+        .badge-not-ready::before { background: var(--red); }
+        .badge-success { background: var(--green-bg); color: var(--green); }
+        .badge-success::before { background: var(--green); }
+        .badge-failed { background: var(--red-bg); color: var(--red); }
+        .badge-failed::before { background: var(--red); }
+        .badge-partial { background: var(--yellow-bg); color: var(--yellow); }
+        .badge-partial::before { background: var(--yellow); }
+
+        /* Form */
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.375rem; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: 0.8125rem; font-weight: 500; color: var(--text-secondary); }
+        .form-group input[type="file"],
+        .form-group input[type="text"] {
+            padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 6px;
+            font-size: 0.875rem; background: var(--bg); transition: border-color 0.15s;
+        }
+        .form-group input:focus { outline: none; border-color: var(--accent); }
+        .checkbox-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; }
+        .checkbox-row input[type="checkbox"] { width: 1rem; height: 1rem; accent-color: var(--accent); }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 6px; font-size: 0.875rem; font-weight: 500; border: none; cursor: pointer; transition: all 0.15s; text-decoration: none; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-primary:disabled { background: var(--gray); cursor: not-allowed; }
+        .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+        .btn-outline:hover { background: var(--gray-bg); }
+        .btn-sm { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+
+        .form-actions { display: flex; align-items: center; gap: 1rem; margin-top: 0.5rem; }
+
+        /* Pipeline steps */
+        .pipeline { display: flex; flex-direction: column; gap: 0; }
+        .step { display: grid; grid-template-columns: 2rem 1fr auto; gap: 0.75rem; align-items: start; padding: 0.75rem 0; position: relative; }
+        .step + .step { border-top: 1px solid var(--border); }
+        .step-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+        .step-icon.done { background: var(--green-bg); color: var(--green); }
+        .step-icon.failed { background: var(--red-bg); color: var(--red); }
+        .step-icon.skipped { background: var(--gray-bg); color: var(--gray); }
+        .step-icon.pending { background: var(--gray-bg); color: var(--gray); }
+        .step-label { font-size: 0.875rem; font-weight: 500; }
+        .step-detail { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.125rem; }
+        .step-time { font-size: 0.75rem; color: var(--text-secondary); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .tab { padding: 0.625rem 1rem; font-size: 0.8125rem; font-weight: 500; color: var(--text-secondary); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; white-space: nowrap; background: none; border-top: none; border-left: none; border-right: none; }
+        .tab:hover { color: var(--text); }
+        .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Text display */
+        .text-box { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; font-family: "SFMono-Regular", "Cascadia Code", "Consolas", monospace; font-size: 0.8125rem; line-height: 1.7; max-height: 500px; overflow-y: auto; white-space: pre-wrap; word-break: break-word; }
+        .text-box-label { font-size: 0.75rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Diff view */
+        .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .diff-col .text-box { max-height: 400px; }
+
+        /* Entity table */
+        .entity-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
+        .entity-table th { text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; background: var(--bg); border-bottom: 1px solid var(--border); }
+        .entity-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .entity-table tr:last-child td { border-bottom: none; }
+        .entity-table tr:hover td { background: #f8f9fb; }
+        .cat-badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 4px; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.03em; }
+        /* Klasse 1: PII */
+        .cat-PERSON { background: #dbeafe; color: #1e40af; }
+        .cat-CONTACT { background: #ffedd5; color: #9a3412; }
+        .cat-ORG_CLIENT { background: #fce7f3; color: #9d174d; }
+        .cat-ORG_UNIT { background: #fae8ff; color: #86198f; }
+        .cat-LOCATION { background: #d1fae5; color: #065f46; }
+        /* Klasse 2: Geschaeftsgeheimnisse */
+        .cat-FUNCTION_TITLE { background: var(--purple-bg); color: var(--purple); }
+        .cat-ORG_PARTNER { background: #ffe4e6; color: #be123c; }
+        .cat-INDUSTRY { background: #e0f2fe; color: #0369a1; }
+        .cat-PRODUCT { background: #fef3c7; color: #92400e; }
+        .cat-PROCESS_ARTIFACT { background: #f0fdf4; color: #166534; }
+        .cat-BUSINESS_METRIC { background: #fef9c3; color: #854d0e; }
+        .cat-TEMPORAL { background: #e0e7ff; color: #3730a3; }
+        .cat-CONTRACT { background: #f1f5f9; color: #334155; }
+        .cat-TECHNOLOGY { background: #ccfbf1; color: #115e59; }
+        .cat-STRATEGY { background: #fee2e2; color: #991b1b; }
+        .cat-NEGATIVE_KNOWHOW { background: #fef2f2; color: #7f1d1d; }
+        .cat-QUASI_ID { background: #f5f5f4; color: #57534e; }
+        /* Legacy (backward compat with existing data) */
+        .cat-ORGANISATION { background: #fce7f3; color: #9d174d; }
+        .cat-ORT { background: #d1fae5; color: #065f46; }
+        .cat-FUNKTION { background: var(--purple-bg); color: var(--purple); }
+        .cat-KONTAKT { background: #ffedd5; color: #9a3412; }
+
+        /* Stats row */
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
+        .stat { background: var(--bg); border-radius: 6px; padding: 0.75rem; text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+        .stat-label { font-size: 0.6875rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.125rem; }
+
+        /* Warnings */
+        .warnings { background: var(--yellow-bg); border: 1px solid #fde68a; border-radius: 6px; padding: 0.75rem 1rem; font-size: 0.8125rem; color: #92400e; margin-bottom: 1rem; }
+        .warnings ul { margin: 0.375rem 0 0 1.25rem; }
+
+        /* Downloads */
+        .download-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+        /* Blocks preview */
+        .blocks-list { display: flex; flex-direction: column; gap: 0.5rem; }
+        .block-item { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+        .block-source { background: var(--bg); padding: 0.375rem 0.75rem; font-size: 0.6875rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid var(--border); }
+        .block-text { padding: 0.625rem 0.75rem; font-family: "SFMono-Regular", "Cascadia Code", "Consolas", monospace; font-size: 0.8125rem; line-height: 1.6; max-height: 200px; overflow-y: auto; white-space: pre-wrap; }
+
+        /* Loading */
+        .spinner { display: none; width: 1rem; height: 1rem; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.6s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .processing-msg { font-size: 0.8125rem; color: var(--text-secondary); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .diff-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">
+            <h1>Pseudonymisierungs-Workflow</h1>
+            <p>Lokale Pseudonymisierung und Generalisierung von Mandantenunterlagen</p>
+        </div>
+
+        <!-- System Status -->
+        <div class="card">
+            <div class="card-header">
+                <h2>System</h2>
+                {% if model_ready %}
+                    <span class="badge badge-ready">LLM bereit</span>
+                {% else %}
+                    <span class="badge badge-not-ready">Modell wird geladen</span>
+                {% endif %}
+            </div>
+            {% if not model_ready %}
+            <div class="card-body">
+                <p class="processing-msg">Das Modell wird beim ersten Start heruntergeladen. Bitte Seite neu laden.</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Upload Form -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Dokument einreichen</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/process" enctype="multipart/form-data" id="uploadForm">
+                    <div class="form-grid">
+                        <div class="form-group full">
+                            <label for="file">Dokument (PDF, DOCX, XLSX, MD, TXT)</label>
+                            <input type="file" name="file" id="file" accept=".pdf,.docx,.xlsx,.md,.txt" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="project_id">Projekt-ID</label>
+                            <input type="text" name="project_id" id="project_id" value="default" placeholder="z.B. mandant-2024-001">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitBtn" {% if not model_ready %}disabled{% endif %}>
+                            Verarbeiten
+                        </button>
+                        <div class="spinner" id="spinner"></div>
+                        <span class="processing-msg" id="statusText"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {% if result %}
+        <!-- Result Overview -->
+        <div class="card">
+            <div class="card-header">
+                <h2>{{ result.filename }}</h2>
+                <span class="badge badge-{{ result.status }}">{{ result.status }}</span>
+            </div>
+            <div class="card-body">
+                <!-- Stats -->
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">{{ result.entities_found }}</div>
+                        <div class="stat-label">Entitäten erkannt</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">{{ result.entities_pseudonymized }}</div>
+                        <div class="stat-label">Pseudonymisiert</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">{{ result.processing_time }}s</div>
+                        <div class="stat-label">Gesamtzeit</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">{{ result.mappings|length }}</div>
+                        <div class="stat-label">Mappings (Projekt)</div>
+                    </div>
+                </div>
+
+                {% if result.warnings %}
+                <div class="warnings">
+                    <strong>Hinweise:</strong>
+                    <ul>
+                    {% for w in result.warnings %}
+                        <li>{{ w }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <!-- Pipeline Steps -->
+                <div class="pipeline">
+                    {% for step in result.steps %}
+                    <div class="step">
+                        <div class="step-icon {{ step.status }}">
+                            {% if step.status == 'done' %}&#10003;{% elif step.status == 'failed' %}&#10007;{% elif step.status == 'skipped' %}&#8212;{% else %}&#8230;{% endif %}
+                        </div>
+                        <div>
+                            <div class="step-label">{{ step.label }}</div>
+                            <div class="step-detail">{{ step.detail }}</div>
+                        </div>
+                        <div class="step-time">
+                            {% if step.duration > 0 %}{{ step.duration }}s{% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed View (Tabs) -->
+        <div class="card">
+            <div class="tabs" id="resultTabs">
+                <button class="tab active" data-tab="input">Eingabe</button>
+                <button class="tab" data-tab="entities">Entitäten ({{ result.entities|length }})</button>
+                <button class="tab" data-tab="pseudonymized">Pseudonymisiert</button>
+                <button class="tab" data-tab="final">Endresultat</button>
+                <button class="tab" data-tab="mappings">Mapping-Tabelle</button>
+                <button class="tab" data-tab="downloads">Downloads</button>
+            </div>
+
+            <!-- Tab: Input -->
+            <div class="tab-content active" id="tab-input">
+                <div class="card-body">
+                    <div class="text-box-label">Extrahierter Text ({{ result.extracted_blocks|length }} Blöcke, {{ result.extracted_text|length }} Zeichen)</div>
+                    {% if result.extracted_blocks|length > 1 %}
+                    <div class="blocks-list">
+                        {% for block in result.extracted_blocks[:20] %}
+                        <div class="block-item">
+                            <div class="block-source">{{ block.source }}</div>
+                            <div class="block-text">{{ block.text }}</div>
+                        </div>
+                        {% endfor %}
+                        {% if result.extracted_blocks|length > 20 %}
+                        <p style="color: var(--text-secondary); font-size: 0.8125rem; padding: 0.5rem;">
+                            ... und {{ result.extracted_blocks|length - 20 }} weitere Blöcke
+                        </p>
+                        {% endif %}
+                    </div>
+                    {% else %}
+                    <div class="text-box">{{ result.extracted_text }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Tab: Entities -->
+            <div class="tab-content" id="tab-entities">
+                <div class="card-body">
+                    {% if result.entities %}
+                    <table class="entity-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 7rem;">Kategorie</th>
+                                <th>Erkannter Text</th>
+                                <th>Pseudonym</th>
+                                <th>Kontext</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for ent in result.entities %}
+                            <tr>
+                                <td><span class="cat-badge cat-{{ ent.category }}">{{ ent.category }}</span></td>
+                                <td><strong>{{ ent.text }}</strong></td>
+                                <td>
+                                    {% for m in result.mappings %}
+                                        {% if m.original == ent.text %}[{{ m.pseudonym }}]{% endif %}
+                                    {% endfor %}
+                                </td>
+                                <td style="color: var(--text-secondary); font-size: 0.75rem;">{{ ent.context[:120] }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <p style="color: var(--text-secondary);">Keine Entitäten erkannt.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Tab: Pseudonymized (before generalization) -->
+            <div class="tab-content" id="tab-pseudonymized">
+                <div class="card-body">
+                    <div class="text-box-label">Text nach Pseudonymisierung</div>
+                    <div class="text-box">{{ result.pseudonymized_text }}</div>
+                </div>
+            </div>
+
+            <!-- Tab: Final Output -->
+            <div class="tab-content" id="tab-final">
+                <div class="card-body">
+                    <div class="text-box-label">
+                        Finaler Output (pseudonymisiert)
+                    </div>
+                    <div class="text-box">{{ result.final_text }}</div>
+                </div>
+            </div>
+
+            <!-- Tab: Mapping Table -->
+            <div class="tab-content" id="tab-mappings">
+                <div class="card-body">
+                    <div class="text-box-label">Mapping-Tabelle — Projekt: {{ result.project_id }}</div>
+                    {% if result.mappings %}
+                    <table class="entity-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 7rem;">Kategorie</th>
+                                <th>Original</th>
+                                <th>Pseudonym</th>
+                                <th>Kontext</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for m in result.mappings %}
+                            <tr>
+                                <td><span class="cat-badge cat-{{ m.category }}">{{ m.category }}</span></td>
+                                <td>{{ m.original }}</td>
+                                <td><strong>[{{ m.pseudonym }}]</strong></td>
+                                <td style="color: var(--text-secondary); font-size: 0.75rem;">{{ m.context[:100] }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <p style="color: var(--text-secondary);">Keine Mappings vorhanden.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Tab: Downloads -->
+            <div class="tab-content" id="tab-downloads">
+                <div class="card-body">
+                    <div class="text-box-label">Artefakte herunterladen</div>
+                    <div class="download-row" style="margin-top: 0.5rem;">
+                        <a href="/download/output/{{ result.output_filename }}" class="btn btn-outline btn-sm">
+                            Pseudonymisierter Text (.txt)
+                        </a>
+                        <a href="/download/mapping/{{ result.mapping_filename }}" class="btn btn-outline btn-sm">
+                            Mapping-Tabelle (.json)
+                        </a>
+                        <a href="/mappings/{{ result.project_id }}/csv" class="btn btn-outline btn-sm">
+                            Mapping-Tabelle (.csv)
+                        </a>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.75rem; margin-top: 1rem;">
+                        Die Mapping-Tabelle ist serverseitig verschlüsselt gespeichert (Fernet/AES).
+                        Die Downloads enthalten die entschlüsselten Daten zur Weiterverwendung.
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabGroup = tab.closest('.card');
+                tabGroup.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tabGroup.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+                tab.classList.add('active');
+                const target = document.getElementById('tab-' + tab.dataset.tab);
+                if (target) target.classList.add('active');
+            });
+        });
+
+        // Form submission loading state
+        const form = document.getElementById('uploadForm');
+        if (form) {
+            form.addEventListener('submit', function() {
+                document.getElementById('submitBtn').disabled = true;
+                document.getElementById('spinner').style.display = 'inline-block';
+                document.getElementById('statusText').textContent = 'Dokument wird verarbeitet — dies kann einige Minuten dauern...';
+            });
+        }
+    </script>
+</body>
+</html>

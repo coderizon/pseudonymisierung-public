@@ -1,0 +1,267 @@
+{
+  "document": "interview_transkript_beratung.txt",
+  "language": "de",
+  "description": "Interview-Transkript mit Geschäftsführer eines Medtech-Startups über gescheiterte Partnerschaften, Strategieoptionen und Organisationsherausforderungen",
+  "entities": [
+    {
+      "text": "Laura Engel",
+      "category": "PERSON",
+      "context": "Interviewer: Laura Engel, Senior Consultant"
+    },
+    {
+      "text": "Dr. Klaus Riedel",
+      "category": "PERSON",
+      "context": "Interviewpartner: Dr. Klaus Riedel, Geschäftsführer NeuroTech Dynamics GmbH"
+    },
+    {
+      "text": "Laura Engel",
+      "category": "PERSON",
+      "context": "Laura Engel: Herr Dr. Riedel, vielen Dank"
+    },
+    {
+      "text": "Dr. Klaus Riedel",
+      "category": "PERSON",
+      "context": "Dr. Klaus Riedel: Gerne, Frau Engel."
+    },
+    {
+      "text": "Prof. Yilmaz",
+      "category": "PERSON",
+      "context": "Unser CTO, Frau Prof. Yilmaz, hat im März 2024 das Unternehmen verlassen"
+    },
+    {
+      "text": "Dr. Tobias Nolte",
+      "category": "PERSON",
+      "context": "Die Leitung der Abteilung Forschung & Entwicklung hat Dr. Tobias Nolte übernommen"
+    },
+    {
+      "text": "Sarah Kim",
+      "category": "PERSON",
+      "context": "unter Sarah Kim, unserer Lead ML Engineer"
+    },
+    {
+      "text": "Frau Petersen",
+      "category": "PERSON",
+      "context": "Bitte koordinieren Sie sich mit meiner Assistentin, Frau Petersen"
+    },
+    {
+      "text": "Maximilian Braun",
+      "category": "PERSON",
+      "context": "Verteiler: Projektteam intern (Laura Engel, Maximilian Braun, Dr. Yuki Tanaka)"
+    },
+    {
+      "text": "Dr. Yuki Tanaka",
+      "category": "PERSON",
+      "context": "Verteiler: Projektteam intern (Laura Engel, Maximilian Braun, Dr. Yuki Tanaka)"
+    },
+    {
+      "text": "a.petersen@neurotech-dynamics.de",
+      "category": "CONTACT",
+      "context": "Ihre E-Mail ist a.petersen@neurotech-dynamics.de"
+    },
+    {
+      "text": "+49 721 8899-100",
+      "category": "CONTACT",
+      "context": "Telefon +49 721 8899-100"
+    },
+    {
+      "text": "NeuroTech Dynamics GmbH",
+      "category": "ORG_CLIENT",
+      "context": "Dr. Klaus Riedel, Geschäftsführer NeuroTech Dynamics GmbH"
+    },
+    {
+      "text": "NeuroTech Dynamics",
+      "category": "ORG_CLIENT",
+      "context": "NeuroTech Dynamics wurde 2018 gegründet"
+    },
+    {
+      "text": "Siemens Healthineers",
+      "category": "ORG_PARTNER",
+      "context": "strategische Partnerschaft mit Siemens Healthineers angebahnt"
+    },
+    {
+      "text": "Continental",
+      "category": "ORG_PARTNER",
+      "context": "Continental hat im Juli informell angefragt"
+    },
+    {
+      "text": "BioVentures Capital",
+      "category": "ORG_PARTNER",
+      "context": "Kontakte zu BioVentures Capital in München laufen bereits"
+    },
+    {
+      "text": "Fraunhofer-Gesellschaft",
+      "category": "ORG_PARTNER",
+      "context": "ein Forschungsinstitut der Fraunhofer-Gesellschaft mit 20%"
+    },
+    {
+      "text": "Abteilung Forschung & Entwicklung",
+      "category": "ORG_UNIT",
+      "context": "Die Leitung der Abteilung Forschung & Entwicklung hat Dr. Tobias Nolte übernommen"
+    },
+    {
+      "text": "Team Algorithmenentwicklung",
+      "category": "ORG_UNIT",
+      "context": "das Team Algorithmenentwicklung unter Sarah Kim"
+    },
+    {
+      "text": "Karlsruhe",
+      "category": "LOCATION",
+      "context": "Ort: Büro des Geschäftsführers, Karlsruhe"
+    },
+    {
+      "text": "München",
+      "category": "LOCATION",
+      "context": "Kontakte zu BioVentures Capital in München"
+    },
+    {
+      "text": "ETH Zürich",
+      "category": "LOCATION",
+      "context": "eine Professur an der ETH Zürich anzutreten"
+    },
+    {
+      "text": "Principal Engineer",
+      "category": "FUNCTION_TITLE",
+      "context": "Dr. Tobias Nolte übernommen, unser bisheriger Principal Engineer"
+    },
+    {
+      "text": "Lead ML Engineer",
+      "category": "FUNCTION_TITLE",
+      "context": "Sarah Kim, unserer Lead ML Engineer"
+    },
+    {
+      "text": "Medizintechnik-Branche",
+      "category": "INDUSTRY",
+      "context": "Neuromorphic-Computing-Lösungen für die Medizintechnik-Branche"
+    },
+    {
+      "text": "Neuromorphic-Computing-Lösungen",
+      "category": "PRODUCT",
+      "context": "Kerngeschäft ist die Entwicklung von Neuromorphic-Computing-Lösungen"
+    },
+    {
+      "text": "NeuroScan Cloud Platform",
+      "category": "PRODUCT",
+      "context": "ein eigenes SaaS-Produkt für Kliniken — die \"NeuroScan Cloud Platform\""
+    },
+    {
+      "text": "CC-089",
+      "category": "CONTRACT",
+      "context": "Projekt: CC-089 (NeuroTech Dynamics GmbH)"
+    },
+    {
+      "text": "95 Mitarbeiter",
+      "category": "BUSINESS_METRIC",
+      "context": "seitdem auf 95 Mitarbeiter gewachsen"
+    },
+    {
+      "text": "EUR 12,4 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "letztes Jahr einen Umsatz von EUR 12,4 Mio. erzielt"
+    },
+    {
+      "text": "22%",
+      "category": "BUSINESS_METRIC",
+      "context": "mit einer Marge von 22%"
+    },
+    {
+      "text": "EUR 380K",
+      "category": "BUSINESS_METRIC",
+      "context": "Wir haben ca. EUR 380K in die Vorbereitung investiert"
+    },
+    {
+      "text": "14 Patente",
+      "category": "BUSINESS_METRIC",
+      "context": "die gesamte Patentlandschaft aufgebaut — 14 Patente"
+    },
+    {
+      "text": "EUR 520K",
+      "category": "BUSINESS_METRIC",
+      "context": "Nach 12 Monaten und EUR 520K Investition"
+    },
+    {
+      "text": "40%",
+      "category": "BUSINESS_METRIC",
+      "context": "ca. 40% unseres Umsatzes ausmacht"
+    },
+    {
+      "text": "25%",
+      "category": "BUSINESS_METRIC",
+      "context": "Medizintechnik-Hersteller in der Schweiz mit 25%"
+    },
+    {
+      "text": "20%",
+      "category": "BUSINESS_METRIC",
+      "context": "Forschungsinstitut der Fraunhofer-Gesellschaft mit 20%"
+    },
+    {
+      "text": "52",
+      "category": "BUSINESS_METRIC",
+      "context": "52 von 95 sind in R&D"
+    },
+    {
+      "text": "EUR 7,2 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "Personalkosten liegen bei EUR 7,2 Mio. pro Jahr"
+    },
+    {
+      "text": "58%",
+      "category": "BUSINESS_METRIC",
+      "context": "das sind 58% des Umsatzes"
+    },
+    {
+      "text": "strategische Partnerschaft mit Siemens Healthineers",
+      "category": "STRATEGY",
+      "context": "2023 eine strategische Partnerschaft mit Siemens Healthineers angebahnt. Das Ziel war die Integration unserer Algorithmen in deren Bildgebungssysteme"
+    },
+    {
+      "text": "strategischen Investor, der uns im Medtech-Bereich positioniert",
+      "category": "STRATEGY",
+      "context": "Wir suchen einen strategischen Investor, der uns im Medtech-Bereich positioniert. Kontakte zu BioVentures Capital in München laufen bereits."
+    },
+    {
+      "text": "diversifizieren in den Automotive-Bereich",
+      "category": "STRATEGY",
+      "context": "Wir diversifizieren in den Automotive-Bereich — unser Algorithmus für Signalverarbeitung lässt sich auch für autonomes Fahren adaptieren."
+    },
+    {
+      "text": "Siemens-Partnerschaft über einen kleineren Scope neu aufzurollen",
+      "category": "STRATEGY",
+      "context": "Wir bleiben auf Kurs und versuchen, die Siemens-Partnerschaft über einen kleineren Scope neu aufzurollen."
+    },
+    {
+      "text": "Partnerschaft mit Siemens Healthineers gescheitert",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "Nach 8 Monaten Verhandlung ist das gescheitert — die Compliance-Anforderungen von Siemens waren für unsere Größe nicht leistbar."
+    },
+    {
+      "text": "NeuroScan Cloud Platform nach 12 Monaten eingestellt",
+      "category": "NEGATIVE_KNOWHOW",
+      "context": "Nach 12 Monaten und EUR 520K Investition haben wir festgestellt, dass der regulatorische Aufwand für ein MDR-konformes Cloud-Produkt unsere Kapazitäten übersteigt. Wir haben das Projekt eingestellt."
+    },
+    {
+      "text": "18. September 2024",
+      "category": "TEMPORAL",
+      "context": "Datum: 18. September 2024"
+    },
+    {
+      "text": "März 2024",
+      "category": "TEMPORAL",
+      "context": "hat im März 2024 das Unternehmen verlassen"
+    },
+    {
+      "text": "Juni 2025",
+      "category": "TEMPORAL",
+      "context": "Laufzeit endet im Juni 2025"
+    },
+    {
+      "text": "25. September 2024",
+      "category": "TEMPORAL",
+      "context": "Ersteinschätzung bis 25. September 2024"
+    },
+    {
+      "text": "Medizintechnik-Branche + Süddeutschland + 95 Mitarbeiter + Neuromorphic Computing",
+      "category": "QUASI_ID",
+      "context": "Kombination aus Branche, Region, Größe und Nische ist hoch identifizierend: Ein Neuromorphic-Computing-Unternehmen mit ~95 MA in der Medizintechnik lässt sich trivial zuordnen."
+    }
+  ]
+}

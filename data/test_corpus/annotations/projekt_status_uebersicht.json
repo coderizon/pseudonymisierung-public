@@ -1,0 +1,417 @@
+{
+  "document": "projekt_status_uebersicht.txt",
+  "language": "de",
+  "description": "Tabellarische Übersicht von 5 Beratungsmandaten mit Detailberichten, Risiken und Meilensteinen",
+  "entities": [
+    {
+      "text": "Dr. Michael Seidel",
+      "category": "PERSON",
+      "context": "Projektleiter: Dr. Michael Seidel"
+    },
+    {
+      "text": "Christine Berger",
+      "category": "PERSON",
+      "context": "Mandantkontakt: Christine Berger (VP Integration Office)"
+    },
+    {
+      "text": "Anna-Lena Fuchs",
+      "category": "PERSON",
+      "context": "Projektleiter: Anna-Lena Fuchs"
+    },
+    {
+      "text": "Thomas Rieger",
+      "category": "PERSON",
+      "context": "Mandantkontakt: Thomas Rieger (Abteilungsleiter Digitalisierung)"
+    },
+    {
+      "text": "Robert Keller",
+      "category": "PERSON",
+      "context": "Projektleiter: Robert Keller"
+    },
+    {
+      "text": "Ing. Franz Huber",
+      "category": "PERSON",
+      "context": "Mandantkontakt: Ing. Franz Huber (Werkleiter Standort Ingolstadt)"
+    },
+    {
+      "text": "Sophia Hartmann",
+      "category": "PERSON",
+      "context": "Projektleiter: Sophia Hartmann"
+    },
+    {
+      "text": "James O'Brien",
+      "category": "PERSON",
+      "context": "Mandantkontakt: James O'Brien (Head of Sustainability, London)"
+    },
+    {
+      "text": "NovaPharma AG",
+      "category": "ORG_CLIENT",
+      "context": "CC-047 | NovaPharma AG | Pharmazeutische Industrie"
+    },
+    {
+      "text": "Stadtwerke Bodensee GmbH",
+      "category": "ORG_CLIENT",
+      "context": "CC-051 | Stadtwerke Bodensee GmbH | Energieversorgung"
+    },
+    {
+      "text": "AutoMotive Precision AG",
+      "category": "ORG_CLIENT",
+      "context": "CC-058 | AutoMotive Precision AG | Automobilzulieferer"
+    },
+    {
+      "text": "DataBridge Holding S.A.",
+      "category": "ORG_CLIENT",
+      "context": "CC-062 | DataBridge Holding S.A. | Finanzdienstleistungen"
+    },
+    {
+      "text": "GreenLogistics International",
+      "category": "ORG_CLIENT",
+      "context": "CC-071 | GreenLogistics International | Transport & Logistik"
+    },
+    {
+      "text": "NovaPharma AG",
+      "category": "ORG_CLIENT",
+      "context": "CC-047: NovaPharma AG"
+    },
+    {
+      "text": "Stadtwerke Bodensee GmbH",
+      "category": "ORG_CLIENT",
+      "context": "CC-051: Stadtwerke Bodensee GmbH"
+    },
+    {
+      "text": "AutoMotive Precision AG",
+      "category": "ORG_CLIENT",
+      "context": "CC-058: AutoMotive Precision AG"
+    },
+    {
+      "text": "GreenLogistics International",
+      "category": "ORG_CLIENT",
+      "context": "CC-071: GreenLogistics International"
+    },
+    {
+      "text": "Deloitte",
+      "category": "ORG_PARTNER",
+      "context": "Deloitte (Co-Beratung)"
+    },
+    {
+      "text": "Accenture",
+      "category": "ORG_PARTNER",
+      "context": "Accenture (Technologie)"
+    },
+    {
+      "text": "McKinsey",
+      "category": "ORG_PARTNER",
+      "context": "McKinsey (Vorlauf)"
+    },
+    {
+      "text": "EY",
+      "category": "ORG_PARTNER",
+      "context": "EY (ESG-Reporting)"
+    },
+    {
+      "text": "CoreTech Solutions GmbH",
+      "category": "ORG_PARTNER",
+      "context": "Vertrag Nr. 2024-0815 mit dem IT-Dienstleister CoreTech Solutions GmbH"
+    },
+    {
+      "text": "Daimler Truck",
+      "category": "ORG_PARTNER",
+      "context": "Evaluierung von Elektro-LKW-Pilotprojekt mit Daimler Truck"
+    },
+    {
+      "text": "VP Integration Office",
+      "category": "FUNCTION_TITLE",
+      "context": "Christine Berger (VP Integration Office)"
+    },
+    {
+      "text": "Werkleiter Standort Ingolstadt",
+      "category": "FUNCTION_TITLE",
+      "context": "Ing. Franz Huber (Werkleiter Standort Ingolstadt)"
+    },
+    {
+      "text": "Head of Sustainability",
+      "category": "FUNCTION_TITLE",
+      "context": "James O'Brien (Head of Sustainability, London)"
+    },
+    {
+      "text": "Pharmazeutische Industrie",
+      "category": "INDUSTRY",
+      "context": "NovaPharma AG | Pharmazeutische Industrie | Post-Merger-Integration"
+    },
+    {
+      "text": "Energieversorgung",
+      "category": "INDUSTRY",
+      "context": "Stadtwerke Bodensee GmbH | Energieversorgung | Digitale Transformation"
+    },
+    {
+      "text": "Automobilzulieferer",
+      "category": "INDUSTRY",
+      "context": "AutoMotive Precision AG | Automobilzulieferer | Operational Excellence"
+    },
+    {
+      "text": "Finanzdienstleistungen",
+      "category": "INDUSTRY",
+      "context": "DataBridge Holding S.A. | Finanzdienstleistungen | Target Operating Model"
+    },
+    {
+      "text": "Transport & Logistik",
+      "category": "INDUSTRY",
+      "context": "GreenLogistics International | Transport & Logistik | Nachhaltigkeitsstrategie"
+    },
+    {
+      "text": "LabWare",
+      "category": "TECHNOLOGY",
+      "context": "Migration des LIMS von LabWare auf Thermo Fisher SampleManager"
+    },
+    {
+      "text": "Thermo Fisher SampleManager",
+      "category": "TECHNOLOGY",
+      "context": "Migration des LIMS von LabWare auf Thermo Fisher SampleManager"
+    },
+    {
+      "text": "Siemens MindSphere",
+      "category": "TECHNOLOGY",
+      "context": "Implementierung der IoT-Plattform auf Basis von Siemens MindSphere"
+    },
+    {
+      "text": "LIMS",
+      "category": "PRODUCT",
+      "context": "Migration des LIMS (Laboratory Information Management System)"
+    },
+    {
+      "text": "Ingolstadt",
+      "category": "LOCATION",
+      "context": "Werkleiter Standort Ingolstadt"
+    },
+    {
+      "text": "London",
+      "category": "LOCATION",
+      "context": "Head of Sustainability, London"
+    },
+    {
+      "text": "CC-047",
+      "category": "CONTRACT",
+      "context": "CC-047 | NovaPharma AG"
+    },
+    {
+      "text": "CC-051",
+      "category": "CONTRACT",
+      "context": "CC-051 | Stadtwerke Bodensee GmbH"
+    },
+    {
+      "text": "CC-058",
+      "category": "CONTRACT",
+      "context": "CC-058 | AutoMotive Precision AG"
+    },
+    {
+      "text": "CC-062",
+      "category": "CONTRACT",
+      "context": "CC-062 | DataBridge Holding S.A."
+    },
+    {
+      "text": "CC-071",
+      "category": "CONTRACT",
+      "context": "CC-071 | GreenLogistics International"
+    },
+    {
+      "text": "Vertrag Nr. 2024-0815",
+      "category": "CONTRACT",
+      "context": "Vertrag Nr. 2024-0815 mit dem IT-Dienstleister CoreTech Solutions GmbH"
+    },
+    {
+      "text": "PRJ-2025-003",
+      "category": "CONTRACT",
+      "context": "Projekt TITAN — interner Codename, Vertrag Nr. PRJ-2025-003"
+    },
+    {
+      "text": "TITAN",
+      "category": "CONTRACT",
+      "context": "Projekt TITAN — interner Codename"
+    },
+    {
+      "text": "1.450.000",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget (EUR) 1.450.000"
+    },
+    {
+      "text": "67%",
+      "category": "BUSINESS_METRIC",
+      "context": "Verbrauch 67%"
+    },
+    {
+      "text": "780.000",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget (EUR) 780.000"
+    },
+    {
+      "text": "41%",
+      "category": "BUSINESS_METRIC",
+      "context": "Verbrauch 41%"
+    },
+    {
+      "text": "2.200.000",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget (EUR) 2.200.000"
+    },
+    {
+      "text": "920.000",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget (EUR) 920.000"
+    },
+    {
+      "text": "98%",
+      "category": "BUSINESS_METRIC",
+      "context": "Verbrauch 98%"
+    },
+    {
+      "text": "520.000",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget (EUR) 520.000"
+    },
+    {
+      "text": "22%",
+      "category": "BUSINESS_METRIC",
+      "context": "Verbrauch 22%"
+    },
+    {
+      "text": "8 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Teamgröße 8 FTE"
+    },
+    {
+      "text": "5 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Teamgröße 5 FTE"
+    },
+    {
+      "text": "12 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Teamgröße 12 FTE"
+    },
+    {
+      "text": "6 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Teamgröße 6 FTE"
+    },
+    {
+      "text": "4 FTE",
+      "category": "BUSINESS_METRIC",
+      "context": "Teamgröße 4 FTE"
+    },
+    {
+      "text": "EUR 3,2 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "Synergievalidierung: EUR 3,2 Mio. Einsparpotenzial bis Ende 2025"
+    },
+    {
+      "text": "12.400",
+      "category": "BUSINESS_METRIC",
+      "context": "Smart-Meter-Rollout: 12.400 von 45.000 Zählern installiert (28%)"
+    },
+    {
+      "text": "45.000",
+      "category": "BUSINESS_METRIC",
+      "context": "12.400 von 45.000 Zählern installiert"
+    },
+    {
+      "text": "28%",
+      "category": "BUSINESS_METRIC",
+      "context": "12.400 von 45.000 Zählern installiert (28%)"
+    },
+    {
+      "text": "120 Außendienstmitarbeiter",
+      "category": "BUSINESS_METRIC",
+      "context": "Schulung der 120 Außendienstmitarbeiter"
+    },
+    {
+      "text": "85%",
+      "category": "BUSINESS_METRIC",
+      "context": "OEE-Ziel 85% (aktuell: 71%)"
+    },
+    {
+      "text": "71%",
+      "category": "BUSINESS_METRIC",
+      "context": "OEE-Ziel 85% (aktuell: 71%)"
+    },
+    {
+      "text": "340 Transportrouten",
+      "category": "BUSINESS_METRIC",
+      "context": "Carbon-Footprint-Analyse der 340 Transportrouten in 12 Ländern"
+    },
+    {
+      "text": "30. September 2024",
+      "category": "TEMPORAL",
+      "context": "Erstellt von: Programmleitung, 30. September 2024"
+    },
+    {
+      "text": "01.04.-31.12.2024",
+      "category": "TEMPORAL",
+      "context": "Laufzeit 01.04.-31.12.2024"
+    },
+    {
+      "text": "15.06.-30.06.2025",
+      "category": "TEMPORAL",
+      "context": "Laufzeit 15.06.-30.06.2025"
+    },
+    {
+      "text": "01.01.-30.09.2025",
+      "category": "TEMPORAL",
+      "context": "Laufzeit 01.01.-30.09.2025"
+    },
+    {
+      "text": "01.02.-31.08.2024",
+      "category": "TEMPORAL",
+      "context": "Laufzeit 01.02.-31.08.2024"
+    },
+    {
+      "text": "01.09.-28.02.2025",
+      "category": "TEMPORAL",
+      "context": "Laufzeit 01.09.-28.02.2025"
+    },
+    {
+      "text": "15. Oktober 2024",
+      "category": "TEMPORAL",
+      "context": "bis 15. Oktober 2024 verlängert werden"
+    },
+    {
+      "text": "15. Oktober 2024",
+      "category": "TEMPORAL",
+      "context": "Abschluss Organisationsdesign: 15. Oktober 2024"
+    },
+    {
+      "text": "Q1 2025",
+      "category": "TEMPORAL",
+      "context": "Go-Live neue Prozesslandschaft: Q1 2025"
+    },
+    {
+      "text": "Ende 2025",
+      "category": "TEMPORAL",
+      "context": "EUR 3,2 Mio. Einsparpotenzial bis Ende 2025"
+    },
+    {
+      "text": "14. Oktober 2024",
+      "category": "TEMPORAL",
+      "context": "Schulung der 120 Außendienstmitarbeiter startet am 14. Oktober 2024"
+    },
+    {
+      "text": "KW 2-4 2025",
+      "category": "TEMPORAL",
+      "context": "Lean-Assessment der Fertigungslinien geplant für KW 2-4 2025"
+    },
+    {
+      "text": "31. März 2025",
+      "category": "TEMPORAL",
+      "context": "Berichterstattung nach CSRD-Anforderungen bis 31. März 2025"
+    },
+    {
+      "text": "15. Oktober 2024",
+      "category": "TEMPORAL",
+      "context": "Programmleitung-Meeting am 15. Oktober 2024"
+    },
+    {
+      "text": "Post-Merger-Integration",
+      "category": "PROCESS_ARTIFACT",
+      "context": "NovaPharma AG | Pharmazeutische Industrie | Post-Merger-Integration"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "document": "workshop_digitalisierung.txt",
+  "language": "de",
+  "description": "Workshop-Protokoll zur Digitalisierung von Kernprozessen mit Ist-Analyse, Lösungsdesign und Budgetbeschlüssen",
+  "entities": [
+    {
+      "text": "Carla Bergmann",
+      "category": "PERSON",
+      "context": "Facilitator: Carla Bergmann (Senior Consultant, Organisationsentwicklung)"
+    },
+    {
+      "text": "Henrik Paulsen",
+      "category": "PERSON",
+      "context": "Henrik Paulsen, VP Digital Transformation"
+    },
+    {
+      "text": "Dr. Anke Richter",
+      "category": "PERSON",
+      "context": "Dr. Anke Richter, Head of Process Excellence"
+    },
+    {
+      "text": "Tobias Lang",
+      "category": "PERSON",
+      "context": "Tobias Lang, IT-Architekt Plattformentwicklung"
+    },
+    {
+      "text": "Claudia Mertens",
+      "category": "PERSON",
+      "context": "Claudia Mertens, Leiterin Capability Center Data & Analytics"
+    },
+    {
+      "text": "Henrik Paulsen",
+      "category": "PERSON",
+      "context": "Henrik Paulsen eröffnet den Workshop mit einer Übersicht"
+    },
+    {
+      "text": "Dr. Anke Richter",
+      "category": "PERSON",
+      "context": "Dr. Anke Richter stellt die Ergebnisse der Prozessanalyse vor"
+    },
+    {
+      "text": "Tobias Lang",
+      "category": "PERSON",
+      "context": "Tobias Lang ergänzt zur technischen Infrastruktur"
+    },
+    {
+      "text": "Claudia Mertens",
+      "category": "PERSON",
+      "context": "Claudia Mertens präsentiert den Vorschlag des Capability Center"
+    },
+    {
+      "text": "Henrik Paulsen",
+      "category": "PERSON",
+      "context": "Verantwortlich: Henrik Paulsen (Gesamtprogramm)"
+    },
+    {
+      "text": "Dr. Anke Richter",
+      "category": "PERSON",
+      "context": "Dr. Anke Richter (Stream Beschaffung)"
+    },
+    {
+      "text": "Stuttgart",
+      "category": "LOCATION",
+      "context": "Ort: Innovationszentrum Stuttgart, Raum Kepler"
+    },
+    {
+      "text": "Stuttgart",
+      "category": "LOCATION",
+      "context": "Pilotierung am Standort Stuttgart, Rollout auf München und Hamburg"
+    },
+    {
+      "text": "München",
+      "category": "LOCATION",
+      "context": "Rollout auf München und Hamburg"
+    },
+    {
+      "text": "Hamburg",
+      "category": "LOCATION",
+      "context": "Rollout auf München und Hamburg"
+    },
+    {
+      "text": "VP Digital Transformation",
+      "category": "FUNCTION_TITLE",
+      "context": "Henrik Paulsen, VP Digital Transformation"
+    },
+    {
+      "text": "Head of Process Excellence",
+      "category": "FUNCTION_TITLE",
+      "context": "Dr. Anke Richter, Head of Process Excellence"
+    },
+    {
+      "text": "IT-Architekt Plattformentwicklung",
+      "category": "FUNCTION_TITLE",
+      "context": "Tobias Lang, IT-Architekt Plattformentwicklung"
+    },
+    {
+      "text": "Leiterin Capability Center Data & Analytics",
+      "category": "FUNCTION_TITLE",
+      "context": "Claudia Mertens, Leiterin Capability Center Data & Analytics"
+    },
+    {
+      "text": "Abteilung Digital Innovation",
+      "category": "ORG_UNIT",
+      "context": "Die Abteilung Digital Innovation hat im Vorfeld 14 Prozesse als digitalisierungsfähig identifiziert"
+    },
+    {
+      "text": "Capability Center Data & Analytics",
+      "category": "ORG_UNIT",
+      "context": "Claudia Mertens präsentiert den Vorschlag des Capability Center Data & Analytics"
+    },
+    {
+      "text": "Personalabteilung",
+      "category": "ORG_UNIT",
+      "context": "Das proprietäre Onboarding-Portal der Personalabteilung"
+    },
+    {
+      "text": "ServiceDesk Pro",
+      "category": "PRODUCT",
+      "context": "Das interne Ticketing-System \"ServiceDesk Pro\" ist veraltet"
+    },
+    {
+      "text": "Camunda BPM",
+      "category": "TECHNOLOGY",
+      "context": "Implementierung eines regelbasierten Workflows in Camunda BPM"
+    },
+    {
+      "text": "SAP S/4HANA",
+      "category": "TECHNOLOGY",
+      "context": "Integration mit SAP S/4HANA für Budgetprüfung in Echtzeit"
+    },
+    {
+      "text": "MuleSoft Anypoint Platform",
+      "category": "TECHNOLOGY",
+      "context": "Die bestehende Middleware basiert auf MuleSoft Anypoint Platform"
+    },
+    {
+      "text": "Apache Kafka",
+      "category": "TECHNOLOGY",
+      "context": "Event-Driven Architecture mit Apache Kafka wird evaluiert"
+    },
+    {
+      "text": "Workday",
+      "category": "TECHNOLOGY",
+      "context": "Ablösung des proprietären Portals durch Workday-Modul"
+    },
+    {
+      "text": "Databricks",
+      "category": "TECHNOLOGY",
+      "context": "Aufbau eines zentralen Data Mesh mit Databricks als Plattform"
+    },
+    {
+      "text": "Salesforce",
+      "category": "TECHNOLOGY",
+      "context": "Anbindung der CRM-Daten aus Salesforce und der ERP-Daten aus SAP"
+    },
+    {
+      "text": "Procurement Gateway",
+      "category": "PROCESS_ARTIFACT",
+      "context": "Der manuelle Freigabeprozess für Beschaffungsanträge (\"Procurement Gateway\")"
+    },
+    {
+      "text": "proprietäre Onboarding-Portal der Personalabteilung",
+      "category": "PROCESS_ARTIFACT",
+      "context": "Das proprietäre Onboarding-Portal der Personalabteilung deckt nur 60% der vorgeschriebenen Schritte digital ab"
+    },
+    {
+      "text": "340",
+      "category": "BUSINESS_METRIC",
+      "context": "wird von ca. 340 Mitarbeitern genutzt"
+    },
+    {
+      "text": "4,3 Tage",
+      "category": "BUSINESS_METRIC",
+      "context": "verursacht durchschnittlich 4,3 Tage Durchlaufzeit"
+    },
+    {
+      "text": "60%",
+      "category": "BUSINESS_METRIC",
+      "context": "deckt nur 60% der vorgeschriebenen Schritte digital ab"
+    },
+    {
+      "text": "23 Systeme",
+      "category": "BUSINESS_METRIC",
+      "context": "verbindet aktuell 23 Systeme"
+    },
+    {
+      "text": "87 REST-Endpunkte",
+      "category": "BUSINESS_METRIC",
+      "context": "Die aktuelle API-Landschaft umfasst 87 REST-Endpunkte"
+    },
+    {
+      "text": "2.100 Personenstunden/Jahr",
+      "category": "BUSINESS_METRIC",
+      "context": "Erwartete Einsparung: 2.100 Personenstunden/Jahr (ca. EUR 180K)"
+    },
+    {
+      "text": "EUR 180K",
+      "category": "BUSINESS_METRIC",
+      "context": "Erwartete Einsparung: 2.100 Personenstunden/Jahr (ca. EUR 180K)"
+    },
+    {
+      "text": "EUR 1,2 Mio.",
+      "category": "BUSINESS_METRIC",
+      "context": "Budget: EUR 1,2 Mio. für 2025, davon EUR 450K für externe Beratung"
+    },
+    {
+      "text": "EUR 450K",
+      "category": "BUSINESS_METRIC",
+      "context": "davon EUR 450K für externe Beratung"
+    },
+    {
+      "text": "PHOENIX",
+      "category": "CONTRACT",
+      "context": "Projekt: PHOENIX"
+    },
+    {
+      "text": "PHOENIX",
+      "category": "CONTRACT",
+      "context": "Projekt PHOENIX wird in drei Streams aufgeteilt"
+    },
+    {
+      "text": "08. Oktober 2024",
+      "category": "TEMPORAL",
+      "context": "Datum: 08. Oktober 2024, 09:00-17:00"
+    },
+    {
+      "text": "Q1 2025",
+      "category": "TEMPORAL",
+      "context": "Migration auf ein modernes ITSM-Tool ist bis Q1 2025 geplant"
+    },
+    {
+      "text": "KW 48",
+      "category": "TEMPORAL",
+      "context": "Proof of Concept soll bis KW 48 vorliegen"
+    },
+    {
+      "text": "30. November 2024",
+      "category": "TEMPORAL",
+      "context": "Nächster Meilenstein: Business Case bis 30. November 2024"
+    },
+    {
+      "text": "22. November 2024",
+      "category": "TEMPORAL",
+      "context": "Nächster Workshop: 22. November 2024"
+    }
+  ]
+}
